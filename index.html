@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="portfolio.css" rel="stylesheet">
 </head>
-<body data-spy="scroll" data-target="#navbar">
+<body data-spy="scroll" data-target="#language-menu">
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -24,7 +24,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#about">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -40,7 +40,7 @@
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
-          <div id="about"></div>
+          <div class="anchor" id="about"></div>
             <div class="jumbotron">
               <div class="row">
                 <div class="col-sm-4">
@@ -62,9 +62,9 @@
 
               </div> <!-- row -->  
             </div><!-- Jumbotron -->
-          <div class="anchor" id="projects">
+          <div class="anchor" id="projects"></div>
 
-          <div id="section-python">
+          <div class="anchor" id="section-python"></div>
           <div class="row">
             <div class="col-xs-12 col-md-6 col-lg-6">
               <h2>File Comparison/Backup (Python)</h2>
@@ -74,20 +74,22 @@
                 <li>compare the files in two folders and show me which were new/updated and would be copied over</li>
                 <li>copy only the new/updated files</li>
               </ol>
-              <p>The program (written in python 3) includes a simple GUI interface and does what I needed it to do.</p>
-              <p><a class="btn btn-default" href="https://github.com/cazyw/python-code" target="_blank" role="button">GitHub Code &raquo;</a></p>
+              <p>I built this program from scratch, initially so that it would run on the command line and later adding a GUI. Particularly challenging in this project was resarching how to access system files and timestamps and how to build a GUI interface. It was initially written in Python 2 but has since been upgraded to Python 3 and is intended to be run in a Windows environment.</p>
+              <p><a class="btn btn-default" href="https://github.com/cazyw/python-code" target="_blank" role="button">GitHub Code &raquo;</a>
+              <a class="btn btn-default" href="backup_screenshots.html" target="_blank" role="button">Screenshots &raquo;</a></p>
             </div><!--/.col-xs-12.col-lg-6-->
             <div class="col-xs-12 col-md-6 col-lg-6">
               <h2>Webpage Creation from Text Files (Python)</h2>
               <p>This was a personal project. I was building a website where I was reviewing episodes of Doctor Who. But every time I changed the style or layout of the page and added different features, I had to change the code for every page (which was very time consuming and frustrating). </p>
-              <p>To cut down on repetition, I wrote my review for each episode in separate text files and built a python script that would build the webpages based on the text files. This way I only needed to amend this script to make changes across all pages.</p>
+              <p>To cut down on repetition, I wrote a script to dynamically create the html files. I wrote my review for each episode in separate text files, organised in a specific file structure and built a python script that would build the webpages based on the text files. This way I only needed to amend this script to make changes across all pages.</p>
+              <p>The challenging aspect of this project was looping through and traversing folder  structures and using regular expressions to dynamically match patterns to create the different HTML pages.</p>
               <p><a class="btn btn-default" href="https://github.com/cazyw/TimeAndSpace/blob/gh-pages/series/create_site.py" target="_blank" role="button">GitHub Code &raquo;</a>
               <a class="btn btn-default" href="#dw" role="button">Website Details Below &raquo;</a></p>
             </div><!--/.col-xs-12.col-lg-6-->
           </div>
-          </div>
+          <hr>
 
-          <div id="section-react">
+          <div class="anchor" id="section-react"></div>
           <div class="row">
             <div class="col-xs-12 col-md-6 col-lg-6">
               <h2>First React App (React)</h2>
@@ -99,27 +101,29 @@
             <div class="col-xs-12 col-md-6 col-lg-6">
               <h2>Clock App (React)</h2>
               <p>Lambda School React Lesson 2</p>
-              <p>This was the second React App I built. The aim of the exercise was to learn about states and how to change states in a React App. This App builds a clock that shows the current time (in the local time zone). It also uses image tiles in order to display the time.</p>
+              <p>This was the second React App I built. The aim of the exercise was to learn about states and how to change states in a React App. This App builds a clock that shows the current time (in the local time zone). It also uses image tiles (like a flip clock) in order to display the time. At the moment it takes a few seconds for the tiled version to sync up with the text version.</p>
               <p><a class="btn btn-default" href="https://github.com/cazyw/LS-Pro-React-II" target="_blank" role="button">GitHub Code &raquo;</a>
               <a class="btn btn-default" href="https://cazyw.github.io/LS-Pro-React-II/" target="_blank" role="button">Demonstration &raquo;</a></p>
             </div><!--/.col-xs-12.col-lg-6-->
           </div>
-          </div>
 
-          <div id="section-website">
+          <hr>
+
+          <div class="anchor" id="section-website"></div>
           <div class="row">
             <div class="col-xs-12 col-md-6 col-lg-6">
               <h2 id="dw">Website (using Bootstrap)</h2>
-              <p>My first foray into using Bootstrap and a bit of javascript in order to create a website that has a revolving carousel, the grid system of bootstrap and a side menu with highlighting that follows the section of the page being viewed.</p>
-              <p>I also created a python program to generate the pages from text files which made it much easier if I changed the style of the webpage since each page was generated dynamically from the python script rather than hardcoded.</p>
+              <p>My first foray into using Bootstrap and a bit of javascript in order to create a website that has a revolving carousel, the grid system of bootstrap and a side menu with scrollspy. Updating this website to use Bootstrap allowed me to try out and take advantage of CSS code and features already available.</p>
+              <p>I also created a python program (see python section above) to generate the pages from text files, which made it much easier if I changed the style of the webpage, since each page was generated dynamically from the python script rather than hardcoded.</p>
               <p><a class="btn btn-default" href="https://github.com/cazyw/TimeAndSpace/tree/gh-pages" target="_blank" role="button">GitHub Code &raquo;</a>
-              <a class="btn btn-default" href="https://cazyw.github.io/TimeAndSpace" target="_blank" role="button">Demonstration &raquo;</a></p>
+              <a class="btn btn-default" href="https://cazyw.github.io/TimeAndSpace" target="_blank" role="button">Demonstration &raquo;</a>
               <a class="btn btn-default" href="https://github.com/cazyw/TimeAndSpace/blob/gh-pages/series/create_site.py" target="_blank" role="button">Python Code &raquo;</a></p>
             </div><!--/.col-xs-12.col-lg-6-->
           </div>
 
+          <hr>
 
-          <div id="section-ruby">
+          <div class="anchor" id="section-ruby"></div>
           <div class="row">
             <div class="col-xs-12 col-md-6 col-lg-6">
               <h2>Ruby on Rails</h2>
@@ -128,15 +132,22 @@
               <a class="btn btn-default" href="#" target="_blank" role="button">Heroku App &raquo;</a></p>
             </div><!--/.col-xs-12.col-lg-6-->
           </div><!--/row-->
-          </div><!-- /ruby -->
 
-          </div><!--/website-->
-          </div><!-- /projects -->
+
+
         </div><!--/.col-xs-12.col-sm-9-->
         
-
+        <div class="col-xs-12 col-sm-3 sidebar-offcanvas list-group" id="language-menu" data-spy="affix">
+          <ul class="nav nav-pills nav-stacked list-group">
+            <li class="list-group-item project-header">Projects</li>
+            <li><a href="#section-python" class="list-group-item">Python</a></li>
+            <li><a href="#section-react" class="list-group-item">React</a></li>
+            <li><a href="#section-website" class="list-group-item">Websites</a></li>
+            <li><a href="#section-ruby" class="list-group-item">Ruby on Rails</a></li>
+          </ul>
+        </div><!--/.sidebar-offcanvas-->
         
-        <div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar" data-spy="affix">
+        <!--<div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar" data-spy="affix">
         <div id="language-menu">
           <ul class="nav list-group">
             <li><a href="#section-python" class="list-group-item">Python</a></li>
@@ -145,7 +156,8 @@
             <li><a href="#section-ruby" class="list-group-item">Ruby on Rails</a></li>
           </ul>
         </div>
-        </div><!--/.sidebar-offcanvas-->
+        </div>-->
+
       </div><!--/row-->
 
       <hr>

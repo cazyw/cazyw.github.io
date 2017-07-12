@@ -89,5 +89,16 @@ footer {
 
 .anchor {
   display: block;
-  height: 100px; /*same height as header*/
+  position: relative;
+  top: -60px; /*same height as header*/
+}
+
+.project-header {
+  background-color:#cc4400;
+  color: #fff;
+}
+
+img.backup-screenshots {
+  width: 500px;
+  padding: 20px;
 }
