@@ -5,11 +5,8 @@ $(document).ready(function () {
   $(".navbar-nav li a").click(function(event) {
     $(".navbar-collapse").collapse('hide');
   });
-  $(document).on('click', 'a', function(event){
+  $('a[href*=\\#]').on('click', function(event){     
     event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
   });
 });
