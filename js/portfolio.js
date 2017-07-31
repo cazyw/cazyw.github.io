@@ -17,7 +17,47 @@ let projects = {
               <p>To cut down on repetition, I wrote a script to dynamically create some of the html files. I wrote my review for each episode in separate text files, organised in a specific file structure. The python script builds the webpages based on the text files and structure. This way I only needed to amend this script to make changes across all pages.</p>\
               <p>The challenging aspect of this project was traversing folder structures and using regular expressions to match patterns and create the different HTML pages.",
         github: "https://github.com/cazyw/TimeAndSpace/blob/gh-pages/series/create_site.py",
-        demo: ""
+        demo: "https://github.com/cazyw/TimeAndSpace/blob/gh-pages/series/create_site.py"
+
+    },
+    pyspaceship: {
+        aim: "Build a spaceship game shooting asteroids.",
+        description: "Python course project to build a spaceship game. A basic template was provided and then classes and methods had to be written in order to control the spaceship, shoot missiles and spawn and explode asteroids.</p>\
+        <p>The course used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below). The code can be copied in and you can select the play button to play the game.",
+        github: "https://github.com/cazyw/interactivePython/blob/master/Wk8_RiceRocks.py",
+        demo: "http://www.codeskulptor.org/"
+
+    },
+    pyblackjack: {
+        aim: "Play Blackjack.",
+        description: "Python course project to build a blackjack game. A basic template was provided and then classes and methods had to be written in order to deal and display the cards and calculate the score and winner.</p>\
+        <p>IThe course used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below). The code can be copied in and you can select the play button to play the game.",
+        github: "https://github.com/cazyw/interactivePython/blob/master/Wk6_Blackjack.py",
+        demo: "http://www.codeskulptor.org/"
+
+    },
+    pypong: {
+        aim: "Play Pong",
+        description: "Python course project to build pong. This required mathematical calculations to move the ball and have it recognise walls and bounce off them and calculate whether the ball hit the paddle or not. </p>\
+        <p>The course used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below). The code can be copied in and you can select the play button to play the game.",
+        github: "https://github.com/cazyw/interactivePython/blob/master/Wk4_Pong.py",
+        demo: "http://www.codeskulptor.org/"
+
+    },
+    pymemory: {
+        aim: "Play Memory",
+        description: "Python course project to build the memory game that randomises a sequence of numbers (cards) and keeps track if the same cards are flipped over.</p>\
+        <p>The course used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below). The code can be copied in and you can select the play button to play the game.",
+        github: "https://github.com/cazyw/interactivePython/blob/master/Wk5_Memory-timer.py",
+        demo: "http://www.codeskulptor.org/"
+
+    },
+    pynumberguessing: {
+        aim: "Guess the Number",
+        description: "Python course project to build a game for users to guess the magic number. The output gives a hint whether the next guess should be higher or lower and counts down the number of guesses.</p>\
+        <p>The course used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below). The code can be copied in and you can select the play button to play the game.",
+        github: "https://github.com/cazyw/interactivePython/blob/master/Wk2_Guess_the_number.py",
+        demo: "http://www.codeskulptor.org/"
 
     },
     reactclock: {
