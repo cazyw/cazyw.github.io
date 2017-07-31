@@ -123,7 +123,7 @@ function projectDetails(project){
     let details = "<p>" + projects[project]["description"] + "</p>";
     let githubrepo = "<div class=\"text-center project-buttons\"><a href=\"" + projects[project]["github"] + "\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>";
     let demo = "<a href=\"" + projects[project]["demo"] + "\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>";
-    $('#projectDetails').html(aim + details + githubrepo + " " + demo);
+    $('#projectDetails').html(aim + details + githubrepo + " " + demo).fadeIn();
 }
 
 
@@ -132,8 +132,10 @@ $(document).ready(function(){
     console.log("ready");
     $(".portfolio-box").on("click", function(event){
         let project = this.id;
-        console.log(project);
-        projectDetails(project);
+        $("#projectDetails").fadeOut(function(){
+            projectDetails(project);
+        });
+
         event.preventDefault();
     });
 });
