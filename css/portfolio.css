@@ -28,7 +28,7 @@ section {
 }
 
 .no-gutter > [class*='col-'] {
-  padding: 5px;
+  padding: 10px;
   background-color: #fff;
 }
 
