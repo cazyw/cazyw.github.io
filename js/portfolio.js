@@ -107,7 +107,7 @@ let projects = {
         demo: "https://cazyw.github.io/twitchTV/"
 
     },
-    jswikipedia: {
+    jstwitch: {
         aim: "Link to Twitch's API to display some information about certain streamers.",
         description: "<p>Free Code Camp mini-project. Users can search for articles that are in Wikipedia. A list of up to 10 matches will display and users can click on them to go to the actual Wikipedia page.</p>\
             <p>This project had me trying to understand how Wikipedia's API worked and also how to animate and transition elements of a webpage.</p>",
