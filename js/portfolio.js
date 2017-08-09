@@ -44,22 +44,6 @@ let projects = {
         demo: "http://www.codeskulptor.org/"
 
     },
-    pymemory: {
-        aim: "Play Memory",
-        description: "<p>Python course project to build the memory game that randomises a sequence of numbers (cards) and keeps track if the same cards are flipped over.</p>\
-        <p>The was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below) to run the code. The code can be copied in and you can select the play button to play the game.</p>",
-        github: "https://github.com/cazyw/interactivePython/blob/master/Wk5_Memory-timer.py",
-        demo: "http://www.codeskulptor.org/"
-
-    },
-    pynumberguessing: {
-        aim: "Guess the Number",
-        description: "<p>Python course project to build a game for users to guess the magic number. The output gives a hint whether the next guess should be higher or lower and counts down the number of guesses.</p>\
-        <p>The was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below) to run the code. The code can be copied in and you can select the play button to play the game.</p>",
-        github: "https://github.com/cazyw/interactivePython/blob/master/Wk2_Guess_the_number.py",
-        demo: "http://www.codeskulptor.org/"
-
-    },
     reactclock: {
         aim: "Lambda School React Lesson 2 - Clock App",
         description: "<p>This was the second React App I built. The aim of the exercise was to learn about states and how to change states in a React App. This App builds a clock that shows the current time (in the local time zone). It also uses image tiles (like a flip clock) in order to display the time. At the moment it may take a few seconds for the tiled version to sync up with the text version.</p>",
@@ -68,7 +52,7 @@ let projects = {
 
     },
     htmldoctorwho: {
-        aim: "Build a website using Bootstrap",
+        aim: "Website using Bootstrap",
         description: "<p>My first foray into using Bootstrap and a bit of javascript in order to create a website that has a revolving carousel, uses the grid system of bootstrap and a side menu with scrollspy. Updating this website to use Bootstrap allowed me to try out and take advantage of CSS code and features already available.</p>\
               <p>I also created a python program to generate the webpages from text files, which made it much easier if I changed the style of the webpage, since each page was generated dynamically from the python script rather than hardcoded.</p>",
         github: "https://github.com/cazyw/TimeAndSpace/tree/gh-pages",
@@ -78,7 +62,7 @@ let projects = {
     jsquote: {
         aim: "Build a webpage that calls on an API to retrieve quotes",
         description: "<p>Free Code Camp mini-project. Users can click on a button to generate a random quote.</p>\
-              <p>The main aim was to learn about JSON and APIs and create a webpage which pulled data from an external source. Users could then post the quote to Twitter. The secondary aim was to continue to learn and implement Javascript/jQuery, CSS and Bootstrap features in order to produce a polished and functional webpage.</p>",
+              <p>This was my first time calling on APIs so the main aim was to learn about JSON and APIs and create a webpage which pulled data from an external source. Users could then also post the quote to Twitter. The secondary aim was to continue to learn and implement Javascript/jQuery, CSS and Bootstrap features in order to produce a polished and functional webpage.</p>",
         github: "https://github.com/cazyw/quoteGenerator",
         demo: "https://cazyw.github.io/quoteGenerator/"
 
@@ -110,7 +94,7 @@ let projects = {
     jstwitch: {
         aim: "Link to Twitch's API to display some information about certain streamers.",
         description: "<p>Free Code Camp mini-project. The page shows a pre-defined list of twitch streamers and some information about them (online / offline / game details if currently online).</p>\
-            <p>The most challenging aspect of this project was implementing the status buttons as these expanded and contracted depending on mouse position/action.</p>",
+            <p>The most challenging aspect of this project was implementing the status buttons as these expanded and contracted depending on mouse position/action. Using only javascript (and no jquery), my implementation is a bit complicated and I hope to update this program to use CSS transitions rather than javascript</p>",
         github: "https://github.com/cazyw/twitchTV",
         demo: "https://cazyw.github.io/twitchTV/"
 
