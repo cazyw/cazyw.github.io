@@ -15,8 +15,16 @@ section {
   padding: 50px 0;
 }
 
-#gitHubLogo {
-    width: 50px;
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.text-center {
+  padding: 0px 20px;
 }
 
 .languageIcon {
@@ -40,4 +48,8 @@ section {
 
 .call-to-action .sr-button {
     border-radius: 0px;
+}
+
+#gitHubLogo {
+    width: 50px;
 }
