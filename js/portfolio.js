@@ -92,9 +92,9 @@ let projects = {
 
     },
     jstwitch: {
-        aim: "Link to Twitch's API to display some information about certain streamers.",
+        aim: "Link to Twitch's API to display status information about certain streamers.",
         description: "<p>Free Code Camp mini-project. The page shows a pre-defined list of twitch streamers and some information about them (online / offline / game details if currently online).</p>\
-            <p>The most challenging aspect of this project was implementing the status buttons as these expanded and contracted depending on mouse position/action. Using only javascript (and no jquery), my implementation is a bit complicated and I hope to update this program to use CSS transitions rather than javascript</p>",
+            <p>The most challenging aspect of this project was implementing the status toggles at the top as these expanded and contracted depending on mouse position/action. These were implemented using CSS transitions on hover. I also experimented with using and styling unordered lists, flexbox and changing the content to be responsive to screen size.</p>",
         github: "https://github.com/cazyw/twitchTV",
         demo: "https://cazyw.github.io/twitchTV/"
 
