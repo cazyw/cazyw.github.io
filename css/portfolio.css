@@ -15,6 +15,10 @@ section {
   padding: 50px 0;
 }
 
+li {
+  text-align: left;
+}
+
 .skills {
   display: flex;
   flex-direction: row;
