@@ -115,7 +115,8 @@ function projectDetails(project){
     let details = "<p>" + projects[project]["description"] + "</p>";
     let githubrepo = "<div class=\"text-center project-buttons\"><a href=\"" + projects[project]["github"] + "\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>";
     let demo = "<a href=\"" + projects[project]["demo"] + "\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>";
-    $('#projectDetails').html(aim + details + githubrepo + " " + demo).fadeIn();
+    let linkBack = "<p><a href=\"#" + project + "\" class=\"page-scroll\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></p>"
+    $('#projectDetails').html(aim + details + githubrepo + " " + demo + linkBack).fadeIn();
 }
 
 

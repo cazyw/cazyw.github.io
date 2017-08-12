@@ -54,6 +54,11 @@ li {
     border-radius: 0px;
 }
 
+.fa-chevron-up {
+  padding: 10px 0px 0px 0px;
+  float: right;
+}
+
 #gitHubLogo {
     width: 50px;
 }
