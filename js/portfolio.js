@@ -131,4 +131,10 @@ $(document).ready(function(){
 
         event.preventDefault();
     });
+
+    gmail = 'gmail.com';
+    emailAdd = ('kazeisc' + '@' + gmail);
+    $(".contact-email").attr('href', `mailto:${emailAdd}`);
+
+
 });
