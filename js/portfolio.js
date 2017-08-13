@@ -1,3 +1,5 @@
+// Object structure: information for each project
+
 let projects = {
     pybackup: {
         aim: "Build a simple file backup program using Python.",
@@ -109,13 +111,13 @@ let projects = {
     }
 }
 
-
+// When a project thumbnail is selected, the project details are added to the webpage
 function projectDetails(project){
-    let aim = "<h2>" + projects[project]["aim"] + "</h2>";
-    let details = "<p>" + projects[project]["description"] + "</p>";
-    let githubrepo = "<div class=\"text-center project-buttons\"><a href=\"" + projects[project]["github"] + "\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>";
-    let demo = "<a href=\"" + projects[project]["demo"] + "\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>";
-    let linkBack = "<p><a href=\"#" + project + "\" class=\"page-scroll\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></p>"
+    let aim = `<h2>${projects[project]["aim"]}</h2>`;
+    let details = `<p>${projects[project]["description"]}</p>`;
+    let githubrepo = `<div class=\"text-center project-buttons\"><a href=\"${projects[project]["github"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>`;
+    let demo = `<a href=\"${projects[project]["demo"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>`;
+    let linkBack = `<p><a href=\"#${project}\" class=\"page-scroll\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></p>`;
     $('#projectDetails').html(aim + details + githubrepo + " " + demo + linkBack).fadeIn();
 }
 
@@ -133,8 +135,7 @@ $(document).ready(function(){
     });
 
     gmail = 'gmail.com';
-    emailAdd = ('kazeisc' + '@' + gmail);
+    emailAdd = ('cyswong' + '@' + gmail);
     $(".contact-email").attr('href', `mailto:${emailAdd}`);
-
 
 });

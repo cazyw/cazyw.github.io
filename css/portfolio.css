@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -47,7 +47,7 @@ li {
 .project-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .call-to-action .sr-button {
