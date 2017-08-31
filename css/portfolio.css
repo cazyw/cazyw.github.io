@@ -215,7 +215,8 @@ section h2 {
 }
 
 .projectDetails .sr-button {
-    border-radius: 300px;
+    border-radius: 0px;
+    border: 1px solid #000;
 }
 
 .languageIcon {

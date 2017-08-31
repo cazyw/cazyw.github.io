@@ -150,6 +150,23 @@ $(document).ready(function() {
     });
 
 
+// Add smooth scrolling on all links inside the navbar
+$('a[href^="#"]').on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    var hash = this.hash;
+
+    $('html, body').stop().animate({
+      scrollTop: $(hash).offset().top - 50
+    }, 1000, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
+}); 
 
     gmail = 'gmail.com';
     emailAdd = ('cyswong' + '@' + gmail);
