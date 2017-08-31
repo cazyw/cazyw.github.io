@@ -117,7 +117,7 @@ function projectDetails(project){
     let details = `<div class=\"text-faded\">${projects[project]["description"]}</div>`;
     let githubrepo = `<div class=\"text-center project-buttons\"><a href=\"${projects[project]["github"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>`;
     let demo = `<a href=\"${projects[project]["demo"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>`;
-    let linkBack = `<p><a href=\"#${project}\" class=\"page-scroll\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></p>`;
+    let linkBack = `<p><a href=\"#${project}\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></p>`;
     $('#projectDetails').html(aim + details + githubrepo + " " + demo + linkBack).fadeIn();
 }
 
@@ -137,6 +137,41 @@ $(document).ready(function() {
 
         event.preventDefault();
     });
+
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    });
+
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+
+
+// Add smooth scrolling on all links inside the navbar
+$('a[href^="#"]').on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    var hash = this.hash;
+
+    $('html, body').stop().animate({
+      scrollTop: $(hash).offset().top - 50
+    }, 1000, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
+  } 
+
+}); 
 
     gmail = 'gmail.com';
     emailAdd = ('cyswong' + '@' + gmail);
