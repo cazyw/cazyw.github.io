@@ -137,6 +137,7 @@ footer {
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
   transition: all .25s ease;
+  visibility: hidden;
 }
 
 .project-box:hover .project-box-description,
@@ -149,6 +150,7 @@ footer {
   background-color: rgba(0, 83, 159, 0.9);
   opacity: 1;
   z-index: 10;
+  visibility: visible;
 }
 
 .project-box-text {

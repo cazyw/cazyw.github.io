@@ -121,6 +121,15 @@ function projectDetails(project){
     $('#projectDetails').html(aim + details + githubrepo + " " + demo + linkBack).fadeIn();
 }
 
+function toggleDescription(elem) {
+    elem.toggleClass("box-clicked").blur();
+}
+
+function checkToggle(elem){
+    if (!elem.hasClass("box-clicked")){
+        toggleDescription(elem); 
+    }
+}
 
 $(document).ready(function() {
 
@@ -132,7 +141,7 @@ $(document).ready(function() {
     })
 
     $(".project-box").on("click", function(event){
-        $(this).toggleClass("box-clicked");
+        toggleDescription($(this)); 
     });
 
     $(".project-details").on("click", function(event){
@@ -142,18 +151,18 @@ $(document).ready(function() {
         });
 
         event.preventDefault();
+        checkToggle($(this).parents(".project-box"));
     });
 
     $(document).on('click', 'a[href^="#"]', function(event) {
-
-    //$('a[href^="#"]').on('click', function(event) {
-        event.preventDefault();
         let anchor = this.hash;
         $('html, body').animate({
             scrollTop: $(anchor).offset().top
         }, 1000, function() {
             window.location.hash = anchor;
+            
         });
+        event.preventDefault();
     });
 
     
