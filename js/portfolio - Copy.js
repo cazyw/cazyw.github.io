@@ -79,7 +79,7 @@ let projects = {
     },
     jsletter: {
         aim: "Modify a webpage form to validate and store/retrieve data locally stored in the browser",
-        description: "<p>This was a Node Girls Javascript mini-project in the full-day self-paced workshop. The structure of the form pages was provided and the exercise was to make it interactive. The final form: validated data being entered and highlighted errors in input, stored valid data in local storage, retrieved data from storage, allowed for random output.</p>\
+        description: "<p>This was a Node Girls Javascript mini-project in the full-day self-paced workshop. The final form: validated data being entered and highlighted errors in input, stored valid data in local storage, retrieved data from storage, allowed for random output.</p>\
               <p>In this project I came to grips with using Javascript to: extract input from forms, modify DOM elements by adding and removing clases and adding HTML/text, loop through objects and use key/value pairs, use local browser storage, use Math.random.</p>",
         github: "https://github.com/cazyw/js-xmas-edition",
         demo: "https://cazyw.github.io/js-xmas-edition/"
@@ -122,8 +122,7 @@ function projectDetails(project){
 }
 
 $(document).ready(function() {
-
-    // Offset for Navigation Bar
+  // Offset for Navigation Bar
     $('#navBar').affix({
         offset: {
             top: 100
@@ -131,12 +130,7 @@ $(document).ready(function() {
     })
 
     $(".project-box").on("click", function(event){
-        $(this).toggleClass("box-clicked");
-    });
-
-    $(".project-details").on("click", function(event){
-        let project = ($(this).parents(".project-box")).attr("id");
-        console.log($(this).parents(".project-box"));
+        let project = this.id;
         $("#projectDetails").fadeOut(function(){
             projectDetails(project);
         });
@@ -144,19 +138,35 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $('a[href^="#"]').on('click', function(event) {
-        event.preventDefault();
-        let anchor = this.hash;
-        $('html, body').animate({
-            scrollTop: $(anchor).offset().top
-        }, 1000, function() {
-            window.location.hash = anchor;
-        });
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
     });
 
+    // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
+
+
+// Add smooth scrolling on all links inside the navbar
+$('a[href^="#"]').on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    var hash = this.hash;
+
+    $('html, body').stop().animate({
+      scrollTop: $(hash).offset().top - 50
+    }, 1000, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
+}); 
 
     gmail = 'gmail.com';
     emailAdd = ('cyswong' + '@' + gmail);
