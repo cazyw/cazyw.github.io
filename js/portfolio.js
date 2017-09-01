@@ -117,9 +117,10 @@ function projectDetails(project){
     let details = `<div class=\"text-faded\">${projects[project]["description"]}</div>`;
     let githubrepo = `<div class=\"text-center project-buttons\"><a href=\"${projects[project]["github"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>`;
     let demo = `<a href=\"${projects[project]["demo"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>`;
-    let linkBack = `<p><a href=\"#${project}\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></p>`;
+    let linkBack = `<div><a href=\"#${project}\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></div>`;
     $('#projectDetails').html(aim + details + githubrepo + " " + demo + linkBack).fadeIn();
 }
+
 
 $(document).ready(function() {
 
@@ -136,7 +137,6 @@ $(document).ready(function() {
 
     $(".project-details").on("click", function(event){
         let project = ($(this).parents(".project-box")).attr("id");
-        console.log($(this).parents(".project-box"));
         $("#projectDetails").fadeOut(function(){
             projectDetails(project);
         });
@@ -144,7 +144,9 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $('a[href^="#"]').on('click', function(event) {
+    $(document).on('click', 'a[href^="#"]', function(event) {
+
+    //$('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
         let anchor = this.hash;
         $('html, body').animate({
@@ -154,6 +156,7 @@ $(document).ready(function() {
         });
     });
 
+    
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });

@@ -183,18 +183,44 @@ footer {
   color: #FFF;
 }
 
+.project-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.project-buttons .btn-default {
+  color: #00539F;
+  font-weight: 700;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.fa-chevron-up {
+  color: #FFCB00;
+  float: right;
+}
+
+#projectDetails p a {
+  color: #FFF;
+}
 
 #about .btn-default {
   border-radius: 300px;
 }
 
-/*#about .section-heading {
-  margin-top: 0px;
-}*/
+
+#projectDetails .btn-default {
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 0;
+  background-color: #FFF;
+}
 
 #gitHubLogo {
   width: 50px;
 }
+
+
 
 #contact {
   min-height: 150px;
