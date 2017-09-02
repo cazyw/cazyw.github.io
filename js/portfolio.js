@@ -122,7 +122,9 @@ function projectDetails(project){
 }
 
 function toggleDescription(elem) {
-    elem.toggleClass("box-clicked").blur();
+    elem.toggleClass("box-clicked");
+    elem.blur();
+    elem.focusout();
 }
 
 function checkToggle(elem){
