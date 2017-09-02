@@ -123,8 +123,6 @@ function projectDetails(project){
 
 function toggleDescription(elem) {
     elem.toggleClass("box-clicked");
-    elem.blur();
-    elem.focusout();
 }
 
 function checkToggle(elem){
@@ -142,15 +140,8 @@ $(document).ready(function() {
         }
     })
 
-    $(".project-box").on("mouseenter", function(event){
-        toggleDescription($(this));
-    });
-
-    $(".project-box").on("mouseleave", function(event){
-        toggleDescription($(this));
-    });
-
     $(".project-box").on("click", function(event){
+        event.preventDefault();
         toggleDescription($(this)); 
     });
 
