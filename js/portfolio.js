@@ -141,7 +141,7 @@ $(document).ready(function() {
     })
 
     $(".project-box").on("click", function(event){
-        event.preventDefault();
+        //event.preventDefault();
         toggleDescription($(this)); 
     });
 
