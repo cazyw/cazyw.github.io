@@ -140,7 +140,7 @@ footer {
   visibility: hidden;
 }
 
-.project-box:hover .project-box-description,
+/*.project-box:hover .project-box-description,*/
 .box-clicked .project-box-description {
   position: absolute;
   left: 0;
