@@ -10,9 +10,9 @@ body {
 header {
   height: 400px;
   padding-top: 100px;
-  background-image: url("../img/header1.jpg");
+  background-image: url("../img/header3.jpg");
   background-size: cover;
-  background-position: 50% 70%;
+  background-position: 50% 50%;
   text-align: center;
   color: #FFF;
 }
