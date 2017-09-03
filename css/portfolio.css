@@ -10,9 +10,9 @@ body {
 header {
   height: 400px;
   padding-top: 100px;
-  background-image: url("../img/header3.jpg");
+  background-image: url("../img/header2.jpg");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 80%;
   text-align: center;
   color: #FFF;
 }
@@ -21,11 +21,12 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3em;
-  text-shadow: 0 0 5px #6A7B86;
+  text-shadow: 0 0 10px #6A7B86;
 }
 
 h3 {
   font-size: 1.5em;
+  text-shadow: 0 0 10px #6A7B86;
 }
 
 hr {
