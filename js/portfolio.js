@@ -133,13 +133,6 @@ function checkToggle(elem){
 
 $(document).ready(function() {
 
-    // Offset for Navigation Bar
-    $('#navBar').affix({
-        offset: {
-            top: 100
-        }
-    })
-
     $(".project-box").on("click", function(event){
         //event.preventDefault();
         toggleDescription($(this)); 
