@@ -112,7 +112,7 @@ let projects = {
 }
 
 // When a project thumbnail is selected, the project details are added to the webpage
-function projectDetails(project){
+let projectDetails = (project) => {
     let aim = `<h2>${projects[project]["aim"]}</h2>`;
     let details = `<div class=\"text-faded\">${projects[project]["description"]}</div>`;
     let githubrepo = `<div class=\"text-center project-buttons\"><a href=\"${projects[project]["github"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>`;
@@ -121,11 +121,11 @@ function projectDetails(project){
     $('#projectDetails').html(aim + details + githubrepo + " " + demo + linkBack).fadeIn();
 }
 
-function toggleDescription(elem) {
+let toggleDescription = (elem) => {
     elem.toggleClass("box-clicked");
 }
 
-function checkToggle(elem){
+let checkToggle = (elem) => {
     if (!elem.hasClass("box-clicked")){
         toggleDescription(elem); 
     }
