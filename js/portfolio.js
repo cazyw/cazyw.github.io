@@ -115,7 +115,7 @@ let projects = {
         <p>The idea for this is to be able to post a photo (food, holiday snap etc) and then write a bit of a reflection on the place or experience or random thought. I'll definitely be adding more features such as grouping by users, adding comments and a calendar. Although in reality I will be the only one using it, it will be good to add other features that are common in Rails apps. </p>\
               <p>The App is currently deployed and available on Heroku.</p>",
         github: "https://github.com/cazyw/photoBlog",
-        demo: "https://immense-dusk-24475.herokuapp.com/"
+        demo: "https://foodforthesoul-blog.herokuapp.com/"
     }
 }
 
