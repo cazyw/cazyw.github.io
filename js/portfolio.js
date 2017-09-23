@@ -112,7 +112,7 @@ let projects = {
     railsPhotoBlog:{
         aim: "Build a photo blog using Ruby on Rails ",
         description: "<p>Building a photo blog using what I'd learnt so far in Rails and deploying to Heroku. This is my current project and a work in progress as I continue to learn and add more features. </p>\
-        <p>The idea for this is to be able to post a photo (food, holiday snap etc) and then write a bit of a reflection on the place or experience or random thought. I'll definitely be adding more features such as grouping by users, adding comments and a calendar. Although in reality I will be the only one using it, it will be good to add other features that are common in Rails apps. </p>\
+        <p>The idea for this is to be able to post a photo (food, holiday snap etc) and then write a bit of a reflection on the place or experience or random thought. I'll definitely be adding more features such as adding comments and a calendar. Although in reality I will be the only one using it, it will be a fun learning experience to add other features that are common in Rails apps. </p>\
               <p>The App is currently deployed and available on Heroku.</p>",
         github: "https://github.com/cazyw/photoBlog",
         demo: "https://foodforthesoul-blog.herokuapp.com/"
