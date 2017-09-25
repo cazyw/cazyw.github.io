@@ -239,6 +239,11 @@ a {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.project-anchor {
+  position: absolute; 
+  top: -55px;
+}
+
 .fa-chevron-up {
   color: #FFCB00;
   float: right;

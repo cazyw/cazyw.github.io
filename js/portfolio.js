@@ -125,7 +125,7 @@ let projectDetails = (project) => {
     let details = `<div class=\"text-faded\">${projects[project]["description"]}</div>`;
     let githubrepo = `<div class=\"text-center project-buttons\"><a href=\"${projects[project]["github"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>`;
     let demo = `<a href=\"${projects[project]["demo"]}\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>`;
-    let linkBack = `<div><a href=\"#${project}\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></div>`;
+    let linkBack = `<div><a href=\"#${project}-anchor\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></div>`;
     $('#projectDetails').html(aim + details + githubrepo + " " + demo + linkBack).fadeIn();
 }
 
@@ -160,6 +160,7 @@ $(document).ready(function() {
         let anchor = this.hash;
         $('html, body').animate({
             scrollTop: $(anchor).offset().top
+            
         }, 1000, function() {
             window.location.hash = anchor;
             
