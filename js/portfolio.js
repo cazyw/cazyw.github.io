@@ -168,8 +168,9 @@ $(document).ready(function() {
     });
 
     
-    $('.navbar-collapse ul li a').click(function() {
-        $('.navbar-toggle:visible').click();
+    $('.navbar-collapse ul li a').on('click', function(event) {
+        // $('.navbar-toggle:visible').click();
+        $('.navbar-collapse').collapse('hide');
     });
 
     gmail = 'gmail.com';

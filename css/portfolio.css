@@ -54,6 +54,10 @@ ul {
   list-style: none;
 }
 
+a {
+  cursor: pointer;
+}
+
 .navbar-default {
   text-transform: uppercase;
   font-weight: 700;
@@ -130,11 +134,15 @@ ul {
 .col-lg-6,
 .col-lg-12 {
   padding: 10px 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .project-box {
   position: relative;
   display: block;
+  cursor: pointer;
+  margin: auto auto;
 }
 
 .project-box-description {
@@ -150,6 +158,8 @@ ul {
   -ms-transition: all .25s ease;
   transition: all .25s ease;
   visibility: hidden;
+  cursor: pointer;
+  max-width: 650px;
 }
 
 @media only screen and (min-width : 480px) {
@@ -165,6 +175,7 @@ ul {
     visibility: visible;
   }
 }
+
 
 .box-clicked .project-box-description {
   position: absolute;
@@ -184,6 +195,7 @@ ul {
   top: 50%;
   width: 100%;
   text-align: center;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
