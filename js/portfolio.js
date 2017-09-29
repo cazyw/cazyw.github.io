@@ -116,6 +116,14 @@ let projects = {
               <p>The App is currently deployed and available on Heroku.</p>",
         github: "https://github.com/cazyw/photoBlog",
         demo: "https://foodforthesoul-blog.herokuapp.com/"
+    },
+    jscalculator:{
+        aim: "Build a calculator app ",
+        description:  "<p>Free Code Camp mini-project. The calculator app was built using HTML, CSS, Javascript and Jquery. </p>\
+        <p>One of the main challenges of this app was determining how to store data so that it could be later retrieved and manipulated. Whilst this was fairly straightfoward for simple [+ - / x] operations, the calculator needed to handle additional features such as deletion, decimals and negative numbers. I realised that simpler is sometimes better.</p>\
+        <p>It was also fun to work out how to create 3D effects and working out the design aspects to try to mirror the appearance of a real-life calculator.</p>",
+        github: "https://github.com/cazyw/calculator",
+        demo: "https://cazyw.github.io/calculator/"
     }
 }
 
