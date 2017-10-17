@@ -124,6 +124,15 @@ let projects = {
         <p>It was also fun to work out how to create 3D effects and working out the design aspects to try to mirror the appearance of a real-life calculator.</p>",
         github: "https://github.com/cazyw/calculator",
         demo: "https://cazyw.github.io/calculator/"
+    },
+    jspomodoro:{
+        aim: "Build a pomodoro timer app ",
+        description:  "<p>Free Code Camp mini-project. The pomodoro timer was built using HTML, CSS and Javascript. </p>\
+        <p>The pomodoro timer alternates between study sessions and break sessions and users can change the time allocated to studying and breaks.</p>\
+        <p>One of the main challenges of this app was determining how to visually display the progression of time in an interesting way. I decided to use scalable vector graphics (svg), starting with a base white circle that is filled in with a colour as time passess (or un-filled during the break). A border was also added for additional highlighting of the state (session vs break).</p>\
+        <p>This was a really fun project to work that again expanded my knowledge of CSS and the use of timers in javascript</p>",
+        github: "https://github.com/cazyw/pomodoroClock",
+        demo: "https://cazyw.github.io/pomodoroClock/"
     }
 }
 
