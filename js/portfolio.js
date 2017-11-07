@@ -133,6 +133,14 @@ let projects = {
         <p>This was a really fun project to work that again expanded my knowledge of CSS and the use of timers in javascript</p>",
         github: "https://github.com/cazyw/pomodoroClock",
         demo: "https://cazyw.github.io/pomodoroClock/"
+    },
+    jstictactoe:{
+        aim: "Build a Tic Tac Toe Game",
+        description:  "<p>Free Code Camp mini-project. Users can play a game of tic tac toe either against another player or against the computer. A simple logic guarantees the computer will at worst draw a game.</p>\
+        <p>It was a challenge to think about how to structure the code for this game, how to break it down into re-usable functions, how to have the different elements transition and fade in and out smoothly. One area that could be improved is that the game is not quite responsive. It's styled to suit two different width/heights so the game displays find (except on really narrow screens) but it isn't 100% responsive as the game has fixed widths.</p>\
+        <p>This was a really fun project to research how to implement some simple logic of an AI.</p>",
+        github: "https://github.com/cazyw/ticTacToe",
+        demo: "https://cazyw.github.io/ticTacToe/"
     }
 }
 
