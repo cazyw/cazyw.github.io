@@ -18,15 +18,15 @@ let projects = {
         description: "<p>This was a personal project. I was building a website (TV episode review) with multiple pages. But as I was learning Bootstrap, every time I changed the style or layout of the page, I had to change the code for every page (which was very time consuming and frustrating). </p>\
               <p>To cut down on repetition, I wrote a script to dynamically create some of the html files. I wrote my review for each episode in separate text files, organised in a specific file structure. The python script builds the webpages based on the text files and structure. This way I only needed to amend this script to make changes across all pages.</p>\
               <p>The challenging aspect of this project was planning the folder structure and using regular expressions to pattern match and create the different HTML pages.</p>",
-        github: "https://github.com/cazyw/TimeAndSpace/blob/gh-pages/series/create_site.py",
-        demo: "https://github.com/cazyw/TimeAndSpace/blob/gh-pages/series/create_site.py"
+        github: "https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py",
+        demo: "https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py"
 
     },
     pyspaceship: {
         aim: "Build a spaceship game shooting asteroids.",
         description: "<p>Python course project to build a spaceship game. A basic template was provided and then classes and methods had to be written in order to control the spaceship, shoot missiles and spawn and explode asteroids.</p>\
         <p>The was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below) to run the code. The code can be copied in and you can select the play button to play the game.</p>",
-        github: "https://github.com/cazyw/interactivePython/blob/master/Wk8_RiceRocks.py",
+        github: "https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py",
         demo: "http://www.codeskulptor.org/"
 
     },
@@ -34,7 +34,7 @@ let projects = {
         aim: "Play Blackjack.",
         description: "<p>Python course project to build a blackjack game. A basic template was provided and then classes and methods had to be written in order to deal and display the cards and calculate the score and winner.</p>\
         <p>The was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below) to run the code. The code can be copied in and you can select the play button to play the game.</p>",
-        github: "https://github.com/cazyw/interactivePython/blob/master/Wk6_Blackjack.py",
+        github: "https://github.com/cazyw/interactive-python/blob/master/Wk6_Blackjack.py",
         demo: "http://www.codeskulptor.org/"
 
     },
@@ -42,7 +42,7 @@ let projects = {
         aim: "Play Pong",
         description: "<p>Python course project to build pong. This required mathematical calculations to move the ball and its position relative to the wall and paddles. </p>\
         <p>The was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below) to run the code. The code can be copied in and you can select the play button to play the game.</p>",
-        github: "https://github.com/cazyw/interactivePython/blob/master/Wk4_Pong.py",
+        github: "https://github.com/cazyw/interactive-python/blob/master/Wk4_Pong.py",
         demo: "http://www.codeskulptor.org/"
 
     },
@@ -57,24 +57,24 @@ let projects = {
         aim: "Website using Bootstrap",
         description: "<p>My first foray into using Bootstrap and a bit of javascript in order to create a website that has a revolving carousel, uses the grid system of bootstrap and a side menu with scrollspy. Updating this website to use Bootstrap allowed me to try out and take advantage of CSS code and features already available.</p>\
               <p>I also created a python program to generate the webpages from text files, which made it much easier if I changed the style of the webpage, since each page was generated dynamically from the python script rather than hardcoded.</p>",
-        github: "https://github.com/cazyw/TimeAndSpace/tree/gh-pages",
-        demo: "https://cazyw.github.io/TimeAndSpace"
+        github: "https://github.com/cazyw/time-and-space/tree/gh-pages",
+        demo: "https://cazyw.github.io/time-and-space"
 
     },
     jsquote: {
         aim: "Build a webpage that calls on an API to retrieve quotes",
         description: "<p>Free Code Camp mini-project. Users can click on a button to generate a random quote.</p>\
               <p>This was my first time calling on APIs so the main aim was to learn about JSON and APIs and create a webpage which pulled data from an external source. Users could then also post the quote to Twitter. The secondary aim was to continue to learn and implement Javascript/jQuery, CSS and Bootstrap features in order to produce a polished and functional webpage.</p>",
-        github: "https://github.com/cazyw/quoteGenerator",
-        demo: "https://cazyw.github.io/quoteGenerator/"
+        github: "https://github.com/cazyw/quote-generator",
+        demo: "https://cazyw.github.io/quote-generator/"
 
     },
     jsweather: {
         aim: "Build a webpage that displays local weather data",
         description: "<p>Free Code Camp mini-project. Users can view details about the weather in their area.</p>\
               <p>After the user's geolocation is obtained, a link is made to the <a href=\"https://fcc-weather-api.glitch.me/\">Free Code Camp Weather API</a>, and certain information displayed. Users are able to also toggle between Celsius and Fahrenheit. In this project I continued to develop experience with calling data from APIs, CSS, Javascript/jQuery, and using templates and features developed by others (e.g. <a href=\"http://momentjs.com/\">moment.js</a> for time, and <a href=\"https://erikflowers.github.io/weather-icons/\">weather icons</a>)</p>",
-        github: "https://github.com/cazyw/localWeather",
-        demo: "https://cazyw.github.io/localWeather/"
+        github: "https://github.com/cazyw/local-weather",
+        demo: "https://cazyw.github.io/local-weather/"
 
     },
     jsletter: {
@@ -89,8 +89,8 @@ let projects = {
         aim: "Link to Wikipedia's API to run searches.",
         description: "<p>Free Code Camp mini-project. Users can search for articles that are in Wikipedia. A list of up to 10 matches will display and users can click on them to go to the actual Wikipedia page.</p>\
             <p>This project had me trying to understand how Wikipedia's API worked and also how to animate and transition elements of a webpage.</p>",
-        github: "https://github.com/cazyw/wikipediaViewer",
-        demo: "https://cazyw.github.io/wikipediaViewer/"
+        github: "https://github.com/cazyw/wikipedia-viewer",
+        demo: "https://cazyw.github.io/wikipedia-viewer/"
 
     },
     jstwitch: {
@@ -114,7 +114,7 @@ let projects = {
         description: "<p>Building a photo blog using what I'd learnt so far in Rails and deploying to Heroku. This is my current project and a work in progress as I continue to learn and add more features. </p>\
         <p>The idea for this is to be able to post a photo (food, holiday snap etc) and then write a bit of a reflection on the place or experience or random thought. I'll definitely be adding more features such as adding comments and a calendar. Although in reality I will be the only one using it, it will be a fun learning experience to add other features that are common in Rails apps. </p>\
               <p>The App is currently deployed and available on Heroku.</p>",
-        github: "https://github.com/cazyw/photoBlog",
+        github: "https://github.com/cazyw/photo-blog",
         demo: "https://foodforthesoul-blog.herokuapp.com/"
     },
     jscalculator:{
@@ -131,24 +131,24 @@ let projects = {
         <p>The pomodoro timer alternates between study sessions and break sessions and users can change the time allocated to studying and breaks.</p>\
         <p>One of the main challenges of this app was determining how to visually display the progression of time in an interesting way. I decided to use scalable vector graphics (svg), starting with a base white circle that is filled in with a colour as time passess (or un-filled during the break). A border was also added for additional highlighting of the state (session vs break).</p>\
         <p>This was a really fun project to work that again expanded my knowledge of CSS and the use of timers in javascript</p>",
-        github: "https://github.com/cazyw/pomodoroClock",
-        demo: "https://cazyw.github.io/pomodoroClock/"
+        github: "https://github.com/cazyw/pomodoro-clock",
+        demo: "https://cazyw.github.io/pomodoro-clock/"
     },
     jstictactoe:{
         aim: "Build a Tic Tac Toe Game",
         description:  "<p>Free Code Camp mini-project. Users can play a game of tic tac toe either against another player or against the computer. A simple logic guarantees the computer will at worst draw a game.</p>\
         <p>It was a challenge to think about how to structure the code for this game, how to break it down into re-usable functions, how to manipulate time and have the different elements transition and fade in and out smoothly. One area that could be improved is that the game is not quite responsive. The game displays fine (except on really narrow screens) but it isn't 100% responsive as the game has fixed widths.</p>\
         <p>This was a really fun project to research how to implement some simple logic of an AI. Check Github for further details.</p>",
-        github: "https://github.com/cazyw/ticTacToe",
-        demo: "https://cazyw.github.io/ticTacToe/"
+        github: "https://github.com/cazyw/tic-tac-toe",
+        demo: "https://cazyw.github.io/tic-tac-toe/"
     },
     jssimongame:{
         aim: "Build a Simon Game",
         description:  "<p>Free Code Camp mini-project. Users can test their memory. The computer will play a sequentially longer series of tones/colours and players must try to replicate the sequence.</p>\
         <p>It was a challenge as this included both audio elements (which I had never used before) and timed elements (which can get complicated when combined with audio elements). </p>\
         <p>This was a really fun project looking at how to incorporate audio into a game. I also learned how to use npm, webpack, used modules and classes and thought about code structure.</p>",
-        github: "https://github.com/cazyw/simonGame",
-        demo: "https://cazyw.github.io/simonGame/"
+        github: "https://github.com/cazyw/simon-game",
+        demo: "https://cazyw.github.io/simon-game/"
     }
 }
 
