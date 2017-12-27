@@ -10,7 +10,7 @@ let projects = {
                 <li>copy only the new/updated files</li>\
               </ol>\
               <p>I built this program from scratch. Particularly challenging in this project was researching how to access system files and timestamps and how to build a GUI interface. It was initially written in Python 2 but has since been upgraded to Python 3 and is intended to be run in a Windows environment.</p>",
-        github: "https://github.com/cazyw/python-code",
+        github: "https://github.com/cazyw/python-file-backup",
         demo: "backup_screenshots.html"
     },
     pywebsite: {
