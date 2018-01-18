@@ -149,6 +149,14 @@ let projects = {
         <p>This was a really fun project looking at how to incorporate audio into a game. I also learned how to use npm, webpack, used modules and classes and thought about code structure.</p>",
         github: "https://github.com/cazyw/simon-game",
         demo: "https://cazyw.github.io/simon-game/"
+    },
+    jsspotify:{
+        aim: "Download track details from Spotify playlists",
+        description:  "<p>This was a personal project - I wanted to be able to download track details (song name, album, artist) from my Spotify playlists. There isn't a way to do this on Spotify itself, so I thought, why not do it myself!</p>\
+        <p>Building this project was both fun and fruitful (since it's something I'll actually use). Things I used/learnt included:  connecting to Spotify's Web API; how to do authorisation and the storing of configuration variables; running a node server on Heroku; Javascript Promises; including links to download data as a file; using webpack for modular javascript coding</p>\
+        <p>From the website users can log into their Spotify account and display and download track details for their playlists</p>",
+        github: "https://github.com/cazyw/spotify-copy-playlist",
+        demo: "https://spotify-copy-playlist.herokuapp.com/"
     }
 }
 
