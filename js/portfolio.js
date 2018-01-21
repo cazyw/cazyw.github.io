@@ -157,6 +157,14 @@ let projects = {
         <p>From the website users can log into their Spotify account and display and download track details for their playlists</p>",
         github: "https://github.com/cazyw/spotify-copy-playlist",
         demo: "https://spotify-copy-playlist.herokuapp.com/"
+    },
+    canvassnake: {
+        aim: "Use HTML5, Canvas and Javascript to build old-school classic games",
+        description: "<p>I saw a few videos of game developers building simple classic games using Canvas and decided to try it out myself. Really fun.</p>\
+        <p>So far I've remade <a href=\"https://cazyw.github.io/fun/snake.html\" target=\"_blank\"> Snake</a> and my next project will be to remake Pong (which I've done before in Python but that needs to be run in CodeSkulptor, a browser-based Python interpreter)</p>\
+        <p>To play Snake: use the Up, Down, Left, Right keys to control the snake and try to eat the apple without runing into your self. There's a slight bug in the randomisation at the moment (the apple may randomly appear on the snake).</p>",
+        github: "https://github.com/cazyw/coding-challenges/tree/master/canvas",
+        demo: "https://cazyw.github.io/fun/snake.html"
     }
 }
 
