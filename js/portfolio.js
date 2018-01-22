@@ -40,10 +40,10 @@ let projects = {
     },
     pypong: {
         aim: "Play Pong",
-        description: "<p>Python course project to build pong. This required mathematical calculations to move the ball and its position relative to the wall and paddles. </p>\
-        <p>The was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a> (link below) to run the code. The code can be copied in and you can select the play button to play the game.</p>",
-        github: "https://github.com/cazyw/interactive-python/blob/master/Wk4_Pong.py",
-        demo: "http://www.codeskulptor.org/"
+        description: "<p>Originally, this was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a>  to run the code. The code can be copied into codeskulptor from < a href=\"https://github.com/cazyw/interactive-python/blob/master/Wk4_Pong.py\" target=\"_blank\"> here </a> and you can select the play button to play the game.</p>\
+        <p>However it doesn't seem to work anymore (they may have upgraded codeskulptor). So as part of my dive into re-creating simple classic games in the web browser, I've implemented the game using HTML5 Canvas and Javascript.</p>",
+        github: "https://github.com/cazyw/coding-challenges/tree/master/canvas",
+        demo: "https://cazyw.github.io/fun/pong.html"
 
     },
     reactclock: {
@@ -56,7 +56,7 @@ let projects = {
     htmldoctorwho: {
         aim: "Website using Bootstrap",
         description: "<p>My first foray into using Bootstrap and a bit of javascript in order to create a website that has a revolving carousel, uses the grid system of bootstrap and a side menu with scrollspy. Updating this website to use Bootstrap allowed me to try out and take advantage of CSS code and features already available.</p>\
-              <p>I also created a python program to generate the webpages from text files, which made it much easier if I changed the style of the webpage, since each page was generated dynamically from the python script rather than hardcoded.</p>",
+        <p>I also created a python program to generate the webpages from text files, which made it much easier if I changed the style of the webpage, since each page was generated dynamically from the python script rather than hardcoded.</p>",
         github: "https://github.com/cazyw/time-and-space/tree/gh-pages",
         demo: "https://cazyw.github.io/time-and-space"
 

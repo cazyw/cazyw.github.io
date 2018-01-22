@@ -1,0 +1,22 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+}
+
+.game-canvas {
+  margin: auto;
+}
+.score-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.score {
+  margin: 20px;
+  padding: 20px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}

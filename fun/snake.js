@@ -82,9 +82,12 @@ function game(callback){
 // draw the canvas then the snake then the apple
 
 function draw(){
+
+  // draw canvas
   ctx.fillStyle = 'rgb(0, 0, 0)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+  // draw snake
   ctx.fillStyle = 'rgb(28, 255, 8)';
   ctx.strokeStyle = 'rgb(0, 0, 0)';
   snakeTrail.forEach((block) => {
@@ -92,6 +95,7 @@ function draw(){
     ctx.strokeRect(block.x, block.y, size, size);
   });
   
+  // draw apple
   ctx.fillStyle = 'rgb(255, 0, 0)';
   ctx.strokeStyle = 'rgb(0, 0, 0)';
   ctx.fillRect(apple.x, apple.y, size, size);
