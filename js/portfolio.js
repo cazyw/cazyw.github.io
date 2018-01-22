@@ -40,7 +40,7 @@ let projects = {
     },
     pypong: {
         aim: "Play Pong",
-        description: "<p>Originally, this was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a>  to run the code. The code can be copied into codeskulptor from < a href=\"https://github.com/cazyw/interactive-python/blob/master/Wk4_Pong.py\" target=\"_blank\"> here </a> and you can select the play button to play the game.</p>\
+        description: "<p>Originally, this was part of the \"An Introduction to Interactive Programming in Python\" course on Coursera run by Rice University. They used <a href=\"http://www.codeskulptor.org\" target=\"_blank\">http://www.codeskulptor.org/</a>  to run the code. The code can be copied into codeskulptor from <a href=\"https://github.com/cazyw/interactive-python/blob/master/Wk4_Pong.py\" target=\"_blank\">here</a> and you can select the play button to play the game.</p>\
         <p>However it doesn't seem to work anymore (they may have upgraded codeskulptor). So as part of my dive into re-creating simple classic games in the web browser, I've implemented the game using HTML5 Canvas and Javascript.</p>",
         github: "https://github.com/cazyw/coding-challenges/tree/master/canvas",
         demo: "https://cazyw.github.io/fun/pong.html"
