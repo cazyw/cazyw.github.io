@@ -155,8 +155,8 @@ let projects = {
         description:  "<p>This was a personal project - I wanted to be able to download track details (song name, album, artist) from my Spotify playlists. There isn't a way to do this on Spotify itself, so I thought, why not do it myself!</p>\
         <p>Building this project was both fun and fruitful (since it's something I'll actually use). Things I used/learnt included:  connecting to Spotify's Web API; how to do authorisation and the storing of configuration variables; running a node server on Heroku; Javascript Promises; including links to download data as a file; using webpack for modular javascript coding</p>\
         <p>From the website users can log into their Spotify account and display and download track details for their playlists</p>",
-        github: "https://github.com/cazyw/spotify-copy-playlist",
-        demo: "https://spotify-copy-playlist.herokuapp.com/"
+        github: "https://github.com/cazyw/spotify-playlist-backup",
+        demo: "https://spotify-playlist-backup.herokuapp.com/"
     },
     canvassnake: {
         aim: "Use HTML5, Canvas and Javascript to build old-school classic games",
