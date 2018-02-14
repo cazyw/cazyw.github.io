@@ -65,8 +65,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   background-color: rgb(54, 119, 179);
-  border-style: none;
-  /*background-color: rgba(255, 149, 0, 1);*/
+  border-bottom: 1px solid black;
 }
 
 .navbar-default .navbar-brand,
@@ -271,7 +270,6 @@ a {
 #about .btn-default {
   border-radius: 300px;
 }
-
 
 #projectDetails .btn-default {
   border-style: solid;
