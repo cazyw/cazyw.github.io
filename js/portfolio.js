@@ -258,6 +258,12 @@ $(document).ready(function() {
   $(document).on("click", ".project-box", function(event){
     toggleDescription($(this)); 
   });
+
+  $(document).on("click", ".fa-chevron-up", function(event){
+    setTimeout(function(){
+      $("#details").remove();
+    }, 1000);
+  });
     
   $(document).on("click", ".project-details", function(event){
     toggleProjectBox($(this));
