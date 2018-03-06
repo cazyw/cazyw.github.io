@@ -4,6 +4,7 @@
 # Ruby script to extract all the project details 
 # from the project tiles in index.html and write
 # to projects.json
+# Also extracts devicons
 ###################################################
 
 require 'json'
@@ -21,8 +22,12 @@ proj_github = /<i class="fa fa-github" aria-hidden="true">/
 proj_html = /<a href="(?<project_html>.+?)"/
 proj_demo = /<i class="fa fa-television" aria-hidden="true">/
 
+dev_icon = /<i class="languageIcon (?<devicon>.+)">/
+
 projects = [] # array of hashes
 project = {} # hash for each project
+
+devicons = [] # array of devicons
 
 # loops through index.html to extract the details of
 # each project
@@ -48,14 +53,22 @@ File.open("../index.html") do |file|
       project['demo'] = pid['project_html']
       projects.push(project)
       project = {}
+    elsif (pid = line.match(dev_icon))
+      devicons.push(pid['devicon'])
     end
   end
 
   # writes to a .json file
-  File.open('./projects.json', 'w+') do |file|
+  File.open('../data/projects.json', 'w+') do |file|
     file.write(JSON.pretty_generate(projects))
+    puts "JSON file generated (projects.json)"
+  end
+  
+  # writes to a .txt file
+  File.open('../data/icons.txt', 'w+') do |file|
+    file.write(devicons)
+    puts "TXT file generated (icons.txt)"
   end
 end
 
-puts "JSON file generated (projects.json)"
 puts "=" * 50
