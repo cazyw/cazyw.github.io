@@ -108,6 +108,15 @@
     "demo": "backup_screenshots.html"
   },
   {
+    "id": "pywebsite",
+    "anchor": "pywebsite-anchor",
+    "img": "img/py-website.jpg",
+    "title": "Website Builder",
+    "description": "Python script to generate webpages from text files",
+    "github": "https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py",
+    "demo": "https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py"
+  },
+  {
     "id": "reactclock",
     "anchor": "reactclock-anchor",
     "img": "img/react-2.jpg",
@@ -124,6 +133,15 @@
     "description": "Been good this year?",
     "github": "https://github.com/cazyw/js-xmas-edition",
     "demo": "https://cazyw.github.io/js-xmas-edition"
+  },
+  {
+    "id": "pyspaceship",
+    "anchor": "pyspaceship-anchor",
+    "img": "img/py-spaceship.jpg",
+    "title": "Spaceship Shooter",
+    "description": "Feel like shooting some asteroids?",
+    "github": "https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py",
+    "demo": "https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py"
   },
   {
     "id": "pypong",

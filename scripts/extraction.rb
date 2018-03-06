@@ -2,9 +2,12 @@
 
 ###################################################
 # Ruby script to extract all the project details 
-# from the project tiles in index.html and write
-# to projects.json
-# Also extracts devicons
+# from the project tiles and devicons  in index.html
+# and write to projects.json and icons.json
+# 
+# This script is no longer relevant since the data
+# has already been extracted and index.html has
+# changed (is now dynamically generated)
 ###################################################
 
 require 'json'
@@ -64,10 +67,10 @@ File.open("../index.html") do |file|
     puts "JSON file generated (projects.json)"
   end
   
-  # writes to a .txt file
-  File.open('../data/icons.txt', 'w+') do |file|
-    file.write(devicons)
-    puts "TXT file generated (icons.txt)"
+  # writes to a .json file
+  File.open('../data/icons.json', 'w+') do |file|
+    file.write(devicons.to_json)
+    puts "JSON file generated (icons.json)"
   end
 end
 
