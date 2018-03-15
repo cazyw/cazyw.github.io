@@ -8,7 +8,7 @@ Some cool things learnt/done and updated from the original version.
 
 ### Dynamically calculating and inserting sections
 
-Clicking on the `speech bubble` in each project tile opens up a section with a summary of the project. Initially this always appeared after the entire project section. As my number of projects expanded, this became unwieldy particularly on mobile devices where the projects are shown in a single column. I added the `insertProjectBoxPositio` function which 
+Clicking on the **speech bubble** in each project tile opens up a section with a summary of the project. Initially this always appeared after the entire project section. As my number of projects expanded, this became unwieldy particularly on mobile devices where the projects are shown in a single column. I added the `insertProjectBoxPositio` function which 
 * obtains the `$(window).innerWidth();` 
 * checks this against the Bootstrap grid breakpoints and calculates how many tiles are on each row
 * inserts the Project Description section immediately after the row containing the tile selected
