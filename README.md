@@ -10,7 +10,7 @@ Some cool things learnt/done and updated from the original version.
 
 Clicking on the **speech bubble** in each project tile opens up a section with a summary of the project. Initially this always appeared after the entire project section. As my number of projects expanded, this became unwieldy particularly on mobile devices where the projects are shown in a single column. I added the `insertProjectBoxPositio` function which 
 * obtains the `$(window).innerWidth();` 
-* checks this against the Bootstrap grid breakpoints and calculates how many tiles are on each row
+* checks this against the Bootstrap grid breakpoint sizes and calculates how many tiles are on each row (as the code uses **Bootstrap 3**)
 * inserts the Project Description section immediately after the row containing the tile selected
 
 e.g. if the second project is selected, and the browser is displaying three tiles in a row, the project details section will appear after the third tile (as that is the end of a row)
