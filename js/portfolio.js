@@ -1,3 +1,4 @@
+/*eslint-disable*/
 // Object structure: information for each project
 
 let projects = {
@@ -170,19 +171,28 @@ let projects = {
   },
   jsspotify:{
     aim: "Download track details from Spotify playlists",
-    skills:"Skills: Javascript, Node.js, Express.js, REST APIs, Heroku, HTML, CSS, Webpack, Babel",
+    skills:"Skills: Javascript, Node.js, Express, REST APIs, Heroku, HTML, CSS, Webpack, Babel",
     description:  "<p>This was a personal project - I wanted to be able to download track details (song name, album, artist) from my Spotify playlists. There isn't a way to do this on Spotify itself, so I thought, why not do it myself!</p>\
         <p>Building this project was both fun and fruitful (since it's something I'll actually use). Things I used/learnt included:  connecting to Spotify's Web API; how to do authorisation and the storing of configuration variables; running a node server on Heroku; Javascript Promises; including links to download data as a file; using webpack for modular javascript coding</p>\
         <p>From the website users can log into their Spotify account and display and download track details for their playlists</p>",
     github: "https://github.com/cazyw/spotify-playlist-backup",
     demo: "https://spotify-playlist-backup.herokuapp.com/"
   },
+  reactexpressshakespeare:{
+    aim: "Create an online collection of Shakespeare quotes",
+    skills:"Skills: Javascript, Node.js, Express, Rest APIs, React, MongoDB, Mocha, TDD, Heroku, HTML, CSS",
+    description:  "<p>This was a personal project to create a web app where I could save a collection of Shakespeare quotes online. I use this as part of #ShakespeareSunday on Twitter!</p>\
+    <p>This was my first project with a React front-end, a more comprehensive Express server, and connecting to a MongoDB database. I also started to include more testing in my project. Checkout the Github Repo for more details.</p>\
+    <p>My current project - this is a work in progress.</p>",
+    github: "https://github.com/cazyw/shakespeare-quotes",
+    demo: "https://shakespeare-sunday.herokuapp.com/"
+  },
   canvassnake: {
     aim: "Use HTML5, Canvas and Javascript to build old-school classic games",
     skills:"Skills: HTML5, CSS, Canvas, Javascript",
     description: "<p>I saw a few videos of game developers building simple classic games using Canvas and decided to try it out myself. Really fun.</p>\
-        <p>So far I've remade <a href=\"https://cazyw.github.io/fun/snake.html\" target=\"_blank\"> Snake</a> and my next project will be to remake Pong (which I've done before in Python but that needs to be run in CodeSkulptor, a browser-based Python interpreter)</p>\
-        <p>To play Snake: use the Up, Down, Left, Right keys to control the snake and try to eat the apple without runing into your self. There's a slight bug in the randomisation at the moment (the apple may randomly appear on the snake).</p>",
+    <p>So far I've remade <a href=\"https://cazyw.github.io/fun/snake.html\" target=\"_blank\"> Snake</a> and my next project will be to remake Pong (which I've done before in Python but that needs to be run in CodeSkulptor, a browser-based Python interpreter)</p>\
+    <p>To play Snake: use the Up, Down, Left, Right keys to control the snake and try to eat the apple without runing into your self. There's a slight bug in the randomisation at the moment (the apple may randomly appear on the snake).</p>",
     github: "https://github.com/cazyw/coding-challenges/tree/master/canvas",
     demo: "https://cazyw.github.io/fun/snake.html"
   }

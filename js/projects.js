@@ -67,6 +67,15 @@ const icons = ['devicon-react-original colored',
 
 const projectOverview = [
   {
+    'id': 'reactexpressshakespeare',
+    'anchor': 'reactexpressshakespeare-anchor',
+    'img': 'img/react-express-shakespeare.jpg',
+    'title': 'Shakespeare Quotes',
+    'description': 'To be or not to be, that is the question',
+    'github': 'https://github.com/cazyw/shakespeare-quotes',
+    'demo': 'https://shakespeare-sunday.herokuapp.com/'
+  },
+  {
     'id': 'jsspotify',
     'anchor': 'jsspotify-anchor',
     'img': 'img/js-spotify.jpg',
@@ -192,15 +201,15 @@ const projectOverview = [
     'github': 'https://github.com/cazyw/LS-Pro-React-II',
     'demo': 'https://cazyw.github.io/LS-Pro-React-II'
   },
-  {
-    'id': 'jsletter',
-    'anchor': 'jsletter-anchor',
-    'img': 'img/js-letter.jpg',
-    'title': 'Letter to Santa',
-    'description': 'Been good this year?',
-    'github': 'https://github.com/cazyw/js-xmas-edition',
-    'demo': 'https://cazyw.github.io/js-xmas-edition'
-  },
+  // {
+  //   'id': 'jsletter',
+  //   'anchor': 'jsletter-anchor',
+  //   'img': 'img/js-letter.jpg',
+  //   'title': 'Letter to Santa',
+  //   'description': 'Been good this year?',
+  //   'github': 'https://github.com/cazyw/js-xmas-edition',
+  //   'demo': 'https://cazyw.github.io/js-xmas-edition'
+  // },
   {
     'id': 'pyspaceship',
     'anchor': 'pyspaceship-anchor',
