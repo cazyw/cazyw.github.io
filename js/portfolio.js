@@ -195,6 +195,14 @@ let projects = {
     <p>To play Snake: use the Up, Down, Left, Right keys to control the snake and try to eat the apple without runing into your self. There's a slight bug in the randomisation at the moment (the apple may randomly appear on the snake).</p>",
     github: "https://github.com/cazyw/coding-challenges/tree/master/canvas",
     demo: "https://cazyw.github.io/fun/snake.html"
+  },
+  chrometraffic: {
+    aim: "Learn and build a chrome extension",
+    skills:"Skills: HTML5, CSS, Javascript, Webpack, Chrome Extension, Mocha",
+    description: "<p>Learning about chrome extensions, I decided to build something for the devtools panel that would analyse web traffic by some tracking agencies. A lot of this information is already available in the Network panel of devtools which displays all network traffic. I decided to extract those from tracking agencies and display them and the data they are sending in an easier to read format.</p>\
+    <p>Collecting the network traffic was fairly easy using the webrequest API. The challenge was with the front-end rendering and modifying the CSS to be able to render the data clearly. </p>",
+    'github': "https://github.com/cazyw/web-traffic-analyser",
+    'demo': "https://github.com/cazyw/web-traffic-analyser"
   }
 };
 
@@ -216,7 +224,7 @@ let toggleDescription = (elem) => {
 
 let checkToggle = (elem) => {
   if (!elem.hasClass("box-clicked")){
-    toggleDescription(elem); 
+    toggleDescription(elem);
   }
 };
 
@@ -232,7 +240,7 @@ let insertProjectBoxPosition = (element) => {
 
   let windowWidth = $(window).innerWidth();
   let insertPosition;
-    
+
   let projectSelectedPosition = $(element).parents(".project-box").parent().index();
 
   if (windowWidth < sm) {
@@ -266,7 +274,7 @@ let toggleProjectBox = (element) => {
 $(document).ready(function() {
 
   $(document).on("click", ".project-box", function(event){
-    toggleDescription($(this)); 
+    toggleDescription($(this));
   });
 
   $(document).on("click", ".fa-chevron-up", function(event){
@@ -274,15 +282,15 @@ $(document).ready(function() {
       $("#details").remove();
     }, 1000);
   });
-    
+
   $(document).on("click", ".project-details", function(event){
     toggleProjectBox($(this));
-        
+
     let project = ($(this).parents(".project-box")).attr("id");
     $("#projectDetails").fadeOut(function(){
       projectDetails(project);
     });
-        
+
     event.preventDefault();
     checkToggle($(this).parents(".project-box"));
   });
@@ -291,15 +299,15 @@ $(document).ready(function() {
     let anchor = this.hash;
     $('html, body').animate({
       scrollTop: $(anchor).offset().top
-            
+
     }, 1000, function() {
       window.location.hash = anchor;
-            
+
     });
     event.preventDefault();
   });
 
-    
+
   $('.navbar-collapse ul li a').on('click', function(event) {
     // $('.navbar-toggle:visible').click();
     $('.navbar-collapse').collapse('hide');

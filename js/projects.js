@@ -62,7 +62,8 @@ const icons = ['devicon-react-original colored',
   'devicon-python-plain colored',
   'devicon-ruby-plain colored',
   'devicon-rails-plain colored',
-  'devicon-git-plain colored'
+  'devicon-git-plain colored',
+  'devicon-webpack-plain-wordmark colored'
 ];
 
 const projectOverview = [
@@ -92,6 +93,15 @@ const projectOverview = [
     'description': 'Reflections in Rails',
     'github': 'https://github.com/cazyw/photo-blog',
     'demo': 'https://foodforthesoul-blog.herokuapp.com/'
+  },
+  {
+    'id': 'chrometraffic',
+    'anchor': 'chrometraffic-anchor',
+    'img': 'img/chrome-traffic.jpg',
+    'title': 'Tracking Analyser',
+    'description': 'Chrome extension to analyse tracking requests',
+    'github': 'https://github.com/cazyw/web-traffic-analyser',
+    'demo': 'https://github.com/cazyw/web-traffic-analyser'
   },
   {
     'id': 'jssimongame',
