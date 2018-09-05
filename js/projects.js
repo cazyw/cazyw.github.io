@@ -1,7 +1,7 @@
 /**
- * Javascript file that generates the devicon section 
+ * Javascript file that generates the devicon section
  * and builds the project tiles
- * 
+ *
  */
 
 
@@ -27,10 +27,10 @@ let projectTemplate = `
           <div class='project-icons'>
             <a href='#details' class='project-details'>
               <i class='fa fa-commenting-o' aria-hidden='true'></i>
-            </a> 
+            </a>
             <a href='PROJECT_GITHUB' target='_blank' alt='PROJECT_GITHUB'>
               <i class='fa fa-github' aria-hidden='true'></i>
-            </a> 
+            </a>
             <a href='PROJECT_DEMO' target='_blank' alt='PROJECT_DEMO'>
               <i class='fa fa-television' aria-hidden='true'></i>
             </a>
@@ -63,7 +63,8 @@ const icons = ['devicon-react-original colored',
   'devicon-ruby-plain colored',
   'devicon-rails-plain colored',
   'devicon-git-plain colored',
-  'devicon-webpack-plain-wordmark colored'
+  'devicon-webpack-plain colored',
+  'devicon-amazonwebservices-original colored'
 ];
 
 const projectOverview = [
