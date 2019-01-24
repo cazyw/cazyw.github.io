@@ -232,7 +232,7 @@ let projectDetails = project => {
   $('#projectDetails')
     .html(aim + skills + details + githubrepo + ' ' + demo + linkBack)
     .fadeIn();
-  $('#details').css({ 'padding-top': '50px', 'padding-bottom': '50px' });
+  $('#details').css({ 'padding-top': '30px', 'padding-bottom': '30px' });
 };
 
 let toggleDescription = elem => {
@@ -316,13 +316,14 @@ $(document).ready(function() {
 
   $(document).on('click', 'a[href^="#"]', function(event) {
     let anchor = this.hash;
+    const buffer = 20;
     $('html, body').animate(
       {
-        scrollTop: $(anchor).offset().top
+        scrollTop: $(anchor).offset().top - buffer
       },
       1000,
       function() {
-        window.location.hash = anchor;
+        window.location.hash = anchor - buffer;
       }
     );
     event.preventDefault();
