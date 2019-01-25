@@ -195,7 +195,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 768px){
+@media screen and (max-width: 768px){
   header {
     height: 300px;
   }
@@ -212,6 +212,25 @@ a {
     font-size: 1em;
   }
 }
+
+@media screen and (max-width: 1920px){
+  header {
+    background-image: url("../img/header1920.jpg");
+  }
+}
+
+@media screen and (max-width: 768px){
+  header {
+    background-image: url("../img/header768.jpg");
+  }
+}
+
+@media screen and (max-width: 576){
+  header {
+    background-image: url("../img/header576.jpg");
+  }
+}
+
 
 
 .box-clicked .project-box-description {
