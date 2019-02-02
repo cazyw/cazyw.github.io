@@ -1,4 +1,3 @@
-/*eslint-disable*/
 // Object structure: information for each project
 
 let projects = {
@@ -217,22 +216,54 @@ let projects = {
   }
 };
 
-// When a project thumbnail is selected, the project details are added to the webpage
-let projectDetails = project => {
-  let aim = `<h2>${projects[project]['aim']}</h2>`;
-  let skills = `<div class=\"text-faded\"><p>${projects[project]['skills']}</p></div>`;
-  let details = `<div class=\"text-faded\">${projects[project]['description']}</div>`;
-  let githubrepo = `<div class=\"text-center project-buttons\"><a href=\"${
+const buildAim = (project, projectDetails) => {
+  const aim = document.createElement('h2');
+  aim.textContent = `${projects[project]['aim']}`;
+  projectDetails.appendChild(aim);
+};
+
+const buildSkills = (project, projectDetails) => {
+  const skills = document.createElement('div');
+  skills.classList.add('text-faded');
+  skills.innerHTML = `<p>${projects[project]['skills']}</p>`;
+  projectDetails.appendChild(skills);
+};
+
+const buildDetails = (project, projectDetails) => {
+  const details = document.createElement('div');
+  details.classList.add('text-faded');
+  details.innerHTML = `${projects[project]['description']}`;
+  projectDetails.appendChild(details);
+};
+
+const buildGitHubDemoButtons = (project, projectDetails) => {
+  const githubrepo = document.createElement('div');
+  githubrepo.classList.add('text-center');
+  githubrepo.classList.add('project-buttons');
+  githubrepo.innerHTML = `<a href="${
     projects[project]['github']
-  }\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>`;
-  let demo = `<a href=\"${
+  }" target="_blank" class="btn btn-default btn-sm sr-button">GitHub Repo</a>`;
+  githubrepo.innerHTML += `<a href="${
     projects[project]['demo']
-  }\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>`;
-  let linkBack = `<div><a href=\"#${project}-anchor\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></div>`;
-  $('#projectDetails')
-    .html(aim + skills + details + githubrepo + ' ' + demo + linkBack)
-    .fadeIn();
-  $('#details').css({ 'padding-top': '30px', 'padding-bottom': '30px' });
+  }" target="_blank" class="btn btn-default btn-sm sr-button">Demo</a></div>`;
+  projectDetails.appendChild(githubrepo);
+};
+
+const buildLinkBack = (project, projectDetails) => {
+  const linkBack = document.createElement('div');
+  linkBack.innerHTML = `<div><a href="#${project}-anchor"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>`;
+  projectDetails.appendChild(linkBack);
+};
+
+// When a project thumbnail is selected, the project details are added to the webpage
+const projectDetails = project => {
+  const projectDetails = document.getElementById('projectDetails');
+
+  buildAim(project, projectDetails);
+  buildSkills(project, projectDetails);
+  buildDetails(project, projectDetails);
+  buildGitHubDemoButtons(project, projectDetails);
+  buildLinkBack(project, projectDetails);
 };
 
 let toggleDescription = elem => {
@@ -254,14 +285,14 @@ let insertProjectBoxPosition = element => {
   const sm = 768;
   const lg = 1200;
 
-  let windowWidth = $(window).innerWidth();
+  let projectSelectedPosition = 0;
+  let projectBox = element[0].parentNode.parentNode.parentNode.parentNode.parentNode;
+  while ((projectBox = projectBox.previousElementSibling)) {
+    projectSelectedPosition++;
+  }
+
+  let windowWidth = window.innerWidth;
   let insertPosition;
-
-  let projectSelectedPosition = $(element)
-    .parents('.project-box')
-    .parent()
-    .index();
-
   if (windowWidth < sm) {
     insertPosition = projectSelectedPosition;
   } else if (windowWidth < lg) {
@@ -275,18 +306,19 @@ let insertProjectBoxPosition = element => {
 
 // the box which displays details about the project
 let toggleProjectBox = element => {
-  $('#details').remove(); // remove existing box
-
+  const details = document.getElementById('details'); // remove existing box
+  if (details) {
+    details.parentNode.removeChild(details);
+  }
   const insertProjectDetailsBox = html => {
     let el = document.createElement('div');
     el.innerHTML = html;
     return el.childNodes[0];
   };
   let box =
-    '<div id="details" class="col-xs-12 color-bg anchor"><div class="container"><div id="projectDetails" class="projectDetails"></div></div></div>';
+    '<div id="details" class="col-xs-12 color-bg anchor"><div class="container"><div id="projectDetails" class=""></div></div></div>';
 
   $('.col-lg-4.col-sm-6.col-xs-12')[insertProjectBoxPosition(element)].after(insertProjectDetailsBox(box));
-  $('#details').css('padding', '0px');
 };
 
 $(document).ready(function() {
@@ -306,9 +338,10 @@ $(document).ready(function() {
     let project = $(this)
       .parents('.project-box')
       .attr('id');
-    $('#projectDetails').fadeOut(function() {
-      projectDetails(project);
-    });
+    projectDetails(project);
+    // $('#projectDetails').fadeOut(function() {
+    //   projectDetails(project);
+    // });
 
     event.preventDefault();
     checkToggle($(this).parents('.project-box'));
