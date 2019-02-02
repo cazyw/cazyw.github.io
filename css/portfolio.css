@@ -309,6 +309,64 @@ a {
   color: #FFF;
 }
 
+
+#details {
+  padding-top: 30px;
+  animation: fadein 2.5s;
+  overflow: hidden;
+  -moz-animation: fadein 2.5s;
+  /* Firefox */
+  -webkit-animation: fadein 2.5s;
+  /* Safari and Chrome */
+  -o-animation: fadein 2.5s;
+  /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+    max-height: 0;
+
+  }
+  to {
+    opacity:1;
+    max-height: 1000px;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity:0;
+    max-height: 0;
+  }
+  to {
+    opacity:1;
+    max-height: 1000px;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity:0;
+    max-height: 0;
+  }
+  to {
+    opacity:1;
+    max-height: 1000px;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity:0;
+    max-height: 0;
+  }
+  to {
+    opacity:1;
+    max-height: 1000px;
+  }
+}
+
 #about .btn-default {
   border-radius: 300px;
 }
