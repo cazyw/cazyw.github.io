@@ -291,7 +291,7 @@ let insertProjectBoxPosition = element => {
     projectSelectedPosition++;
   }
 
-  let windowWidth = window.innerWidth;
+  const windowWidth = window.innerWidth;
   let insertPosition;
   if (windowWidth < sm) {
     insertPosition = projectSelectedPosition;
@@ -304,21 +304,25 @@ let insertProjectBoxPosition = element => {
   return insertPosition;
 };
 
+const insertProjectDetailsBox = html => {
+  let el = document.createElement('div');
+  el.innerHTML = html;
+  return el.childNodes[0];
+};
+
 // the box which displays details about the project
-let toggleProjectBox = element => {
-  const details = document.getElementById('details'); // remove existing box
+const toggleProjectBox = element => {
+  const details = document.getElementById('details');
   if (details) {
     details.parentNode.removeChild(details);
   }
-  const insertProjectDetailsBox = html => {
-    let el = document.createElement('div');
-    el.innerHTML = html;
-    return el.childNodes[0];
-  };
+
   let box =
     '<div id="details" class="col-xs-12 color-bg anchor"><div class="container"><div id="projectDetails" class=""></div></div></div>';
 
-  $('.col-lg-4.col-sm-6.col-xs-12')[insertProjectBoxPosition(element)].after(insertProjectDetailsBox(box));
+  // the project to insert details box after
+  const precedingElement = document.querySelectorAll('.col-lg-4.col-sm-6.col-xs-12')[insertProjectBoxPosition(element)];
+  precedingElement.parentNode.insertBefore(insertProjectDetailsBox(box), precedingElement.nextSibling);
 };
 
 $(document).ready(function() {
@@ -339,9 +343,6 @@ $(document).ready(function() {
       .parents('.project-box')
       .attr('id');
     projectDetails(project);
-    // $('#projectDetails').fadeOut(function() {
-    //   projectDetails(project);
-    // });
 
     event.preventDefault();
     checkToggle($(this).parents('.project-box'));
@@ -356,7 +357,7 @@ $(document).ready(function() {
       },
       1000,
       function() {
-        window.location.hash = anchor - buffer;
+        window.location.hash = anchor;
       }
     );
     event.preventDefault();
