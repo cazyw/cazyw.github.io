@@ -272,13 +272,6 @@ const toggleProjectSummary = elem => {
   elem.classList.contains('box-clicked') ? elem.classList.remove('box-clicked') : elem.classList.add('box-clicked');
 };
 
-const checkToggle = elem => {
-  if (!elem[0].classList.contains('box-clicked')) {
-    console.log('check toggle element', elem[0]);
-    toggleProjectSummary(elem[0]);
-  }
-};
-
 // gets the position to insert the project details box
 // inserts the details box right below the project image
 // calculations required as the number of project images per line
@@ -329,8 +322,6 @@ const toggleProjectBox = element => {
 };
 
 // Add event listeners
-// const projectBoxes = document.getElementsByClassName('project-box');
-// Array.from(projectBoxes, box => box.addEventListener('click', toggleProjectSummary.bind(null, box)));
 
 document.body.addEventListener('click', function(event) {
   if (event.target && event.target.classList.contains('fa-chevron-up')) {
@@ -342,12 +333,6 @@ document.body.addEventListener('click', function(event) {
 });
 
 $(document).ready(function() {
-  // $(document).on('click', '.fa-chevron-up', function(event) {
-  //   setTimeout(function() {
-  //     $('#details').remove();
-  //   }, 1000);
-  // });
-
   $(document).on('click', '.project-details', function(event) {
     toggleProjectBox($(this));
 
@@ -357,7 +342,6 @@ $(document).ready(function() {
     projectDetails(project);
 
     event.preventDefault();
-    // checkToggle($(this).parents('.project-box'));
   });
 
   $(document).on('click', 'a[href^="#"]', function(event) {
