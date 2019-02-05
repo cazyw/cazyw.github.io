@@ -268,12 +268,14 @@ const projectDetails = project => {
 
 // toggles the project summary overlay
 const toggleProjectSummary = elem => {
+  console.log(elem.classList);
   elem.classList.contains('box-clicked') ? elem.classList.remove('box-clicked') : elem.classList.add('box-clicked');
 };
 
 const checkToggle = elem => {
-  if (!elem.hasClass('box-clicked')) {
-    toggleProjectSummary(elem);
+  if (!elem[0].classList.contains('box-clicked')) {
+    console.log('check toggle element', elem[0]);
+    toggleProjectSummary(elem[0]);
   }
 };
 
@@ -326,19 +328,25 @@ const toggleProjectBox = element => {
   precedingElement.parentNode.insertBefore(insertProjectDetailsBox(box), precedingElement.nextSibling);
 };
 
-const projectSummaryListener = () => {
-  const projectBoxes = document.getElementsByClassName('project-box');
-  Array.from(projectBoxes, box => box.addEventListener('click', toggleProjectSummary.bind(null, box)));
-};
+// Add event listeners
+// const projectBoxes = document.getElementsByClassName('project-box');
+// Array.from(projectBoxes, box => box.addEventListener('click', toggleProjectSummary.bind(null, box)));
 
-projectSummaryListener();
+document.body.addEventListener('click', function(event) {
+  if (event.target && event.target.classList.contains('fa-chevron-up')) {
+    setTimeout(() => {
+      const details = document.getElementById('details');
+      details.parentNode.removeChild(details);
+    }, 1000);
+  }
+});
 
 $(document).ready(function() {
-  $(document).on('click', '.fa-chevron-up', function(event) {
-    setTimeout(function() {
-      $('#details').remove();
-    }, 1000);
-  });
+  // $(document).on('click', '.fa-chevron-up', function(event) {
+  //   setTimeout(function() {
+  //     $('#details').remove();
+  //   }, 1000);
+  // });
 
   $(document).on('click', '.project-details', function(event) {
     toggleProjectBox($(this));
@@ -349,7 +357,7 @@ $(document).ready(function() {
     projectDetails(project);
 
     event.preventDefault();
-    checkToggle($(this).parents('.project-box'));
+    // checkToggle($(this).parents('.project-box'));
   });
 
   $(document).on('click', 'a[href^="#"]', function(event) {
