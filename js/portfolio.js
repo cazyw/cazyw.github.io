@@ -266,13 +266,14 @@ const projectDetails = project => {
   buildLinkBack(project, projectDetails);
 };
 
-let toggleDescription = elem => {
-  elem.toggleClass('box-clicked');
+// toggles the project summary overlay
+const toggleProjectSummary = elem => {
+  elem.classList.contains('box-clicked') ? elem.classList.remove('box-clicked') : elem.classList.add('box-clicked');
 };
 
-let checkToggle = elem => {
+const checkToggle = elem => {
   if (!elem.hasClass('box-clicked')) {
-    toggleDescription(elem);
+    toggleProjectSummary(elem);
   }
 };
 
@@ -325,11 +326,14 @@ const toggleProjectBox = element => {
   precedingElement.parentNode.insertBefore(insertProjectDetailsBox(box), precedingElement.nextSibling);
 };
 
-$(document).ready(function() {
-  $(document).on('click', '.project-box', function(event) {
-    toggleDescription($(this));
-  });
+const projectSummaryListener = () => {
+  const projectBoxes = document.getElementsByClassName('project-box');
+  Array.from(projectBoxes, box => box.addEventListener('click', toggleProjectSummary.bind(null, box)));
+};
 
+projectSummaryListener();
+
+$(document).ready(function() {
   $(document).on('click', '.fa-chevron-up', function(event) {
     setTimeout(function() {
       $('#details').remove();
