@@ -251,7 +251,7 @@ const buildGitHubDemoButtons = (project, projectDetails) => {
 
 const buildLinkBack = (project, projectDetails) => {
   const linkBack = document.createElement('div');
-  linkBack.innerHTML = `<div><a href="#${project}-anchor"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>`;
+  linkBack.innerHTML = `<div><a href="#${project}-anchor"><i class="fa fa-chevron-up link" aria-hidden="true"></i></a></div>`;
   projectDetails.appendChild(linkBack);
 };
 
@@ -332,6 +332,41 @@ document.body.addEventListener('click', function(event) {
   }
 });
 
+let call;
+let targetElement;
+let bounding = 0;
+function scroll() {
+  bounding = Math.round(targetElement.getBoundingClientRect().y);
+  if (bounding === 0) {
+    clearInterval(call);
+  } else if (bounding > 0 && bounding <= 30) {
+    clearInterval(call);
+  } else if (bounding > 0) {
+    document.documentElement.scrollTop += 5;
+  } else if (bounding < 0) {
+    document.documentElement.scrollTop -= 5
+  } else {
+      clearInterval(call)
+  }
+};
+
+function reply_click(target) {
+  setTimeout(() => {
+    targetElement = document.getElementById(target);
+    call = setInterval(scroll, 5);
+  }, 700);
+}
+
+document.body.addEventListener('click', function(event) {
+  event.preventDefault();
+  console.log(event);
+  if (event.target && (event.target.tagName === 'A')) {
+    reply_click((event.target.hash).replace('#',''));
+  } else if (event.target && event.target.classList.contains('link')) {
+    reply_click((event.srcElement.parentNode.hash).replace('#',''));
+  }
+});
+
 $(document).ready(function() {
   $(document).on('click', '.project-details', function(event) {
     toggleProjectBox($(this));
@@ -341,21 +376,6 @@ $(document).ready(function() {
       .attr('id');
     projectDetails(project);
 
-    event.preventDefault();
-  });
-
-  $(document).on('click', 'a[href^="#"]', function(event) {
-    let anchor = this.hash;
-    const buffer = 20;
-    $('html, body').animate(
-      {
-        scrollTop: $(anchor).offset().top - buffer
-      },
-      1000,
-      function() {
-        window.location.hash = anchor;
-      }
-    );
     event.preventDefault();
   });
 
