@@ -25,7 +25,7 @@ let projectTemplate = `
           </div>
           <div class='project-icons'>
             <a href='#details' class='project-details'>
-              <i class='fa fa-commenting-o' aria-hidden='true'></i>
+              <i class='fa fa-commenting-o link' aria-hidden='true'></i>
             </a>
             <a href='PROJECT_GITHUB' target='_blank' alt='PROJECT_GITHUB'>
               <i class='fa fa-github' aria-hidden='true'></i>
