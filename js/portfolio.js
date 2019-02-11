@@ -268,7 +268,6 @@ const projectDetails = project => {
 
 // toggles the project summary overlay
 const toggleProjectSummary = elem => {
-  console.log(elem.classList);
   elem.classList.contains('box-clicked') ? elem.classList.remove('box-clicked') : elem.classList.add('box-clicked');
 };
 
@@ -344,11 +343,11 @@ function scroll() {
   } else if (bounding > 0) {
     document.documentElement.scrollTop += 5;
   } else if (bounding < 0) {
-    document.documentElement.scrollTop -= 5
+    document.documentElement.scrollTop -= 5;
   } else {
-      clearInterval(call)
+    clearInterval(call);
   }
-};
+}
 
 function reply_click(target) {
   setTimeout(() => {
@@ -359,11 +358,15 @@ function reply_click(target) {
 
 document.body.addEventListener('click', function(event) {
   event.preventDefault();
-  console.log(event);
-  if (event.target && (event.target.tagName === 'A')) {
-    reply_click((event.target.hash).replace('#',''));
+
+  if (event.target && event.target.tagName === 'A') {
+    reply_click(event.target.hash.replace('#', ''));
   } else if (event.target && event.target.classList.contains('link')) {
-    reply_click((event.srcElement.parentNode.hash).replace('#',''));
+    reply_click(event.srcElement.parentNode.hash.replace('#', ''));
+  }
+
+  if (event.target && event.target.classList.contains('project-box-description')) {
+    toggleProjectSummary(event.target.parentNode.childNodes[5]);
   }
 });
 
