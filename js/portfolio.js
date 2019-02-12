@@ -386,8 +386,6 @@ $(document).ready(function() {
     $('.navbar-collapse').collapse('hide');
   });
 
-  gmail = 'gmail.com';
-  emailAdd = 'kazeisc' + '@' + gmail;
   $('.contact-linkedin').attr('href', `https://www.linkedin.com/in/carol-w-2a3b1646`);
 });
 
