@@ -75,7 +75,7 @@ const projectOverview = [
     'title': 'Shakespeare Quotes',
     'description': 'To be or not to be, that is the question',
     'github': 'https://github.com/cazyw/shakespeare-quotes',
-    'demo': 'https://shakespeare-sunday.herokuapp.com/'
+    'demo': 'https://shakespeare.cazcodes.dev/'
   },
   {
     'id': 'jsspotify',
