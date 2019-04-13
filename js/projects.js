@@ -63,7 +63,7 @@ const icons = [
   'devicon-rails-plain colored',
   'devicon-git-plain colored',
   'devicon-webpack-plain colored',
-  'devicon-amazonwebservices-original colored'
+  'devicon-amazonwebservices-original colored',
 ];
 
 const projectOverview = [
@@ -74,7 +74,7 @@ const projectOverview = [
     title: 'Shakespeare Quotes',
     description: 'To be or not to be, that is the question',
     github: 'https://github.com/cazyw/shakespeare-quotes',
-    demo: 'https://shakespeare-sunday.herokuapp.com/'
+    demo: 'https://shakespeare-sunday.herokuapp.com/',
   },
   {
     id: 'jsspotify',
@@ -83,7 +83,7 @@ const projectOverview = [
     title: 'Spotify Playlist Backup',
     description: 'Download track details from your playlists',
     github: 'https://github.com/cazyw/spotify-playlist-backup',
-    demo: 'https://spotify-playlist-backup.herokuapp.com/'
+    demo: 'https://spotify-playlist-backup.herokuapp.com/',
   },
   {
     id: 'railsPhotoBlog',
@@ -92,7 +92,7 @@ const projectOverview = [
     title: 'Photo Blog - Food for the soul',
     description: 'Reflections in Rails',
     github: 'https://github.com/cazyw/photo-blog',
-    demo: 'https://foodforthesoul-blog.herokuapp.com/'
+    demo: 'https://foodforthesoul-blog.herokuapp.com/',
   },
   {
     id: 'jssimongame',
@@ -101,7 +101,7 @@ const projectOverview = [
     title: 'Simon Game',
     description: 'How good is your memory?',
     github: 'https://github.com/cazyw/simon-game',
-    demo: 'https://cazyw.github.io/simon-game'
+    demo: 'https://cazyw.github.io/simon-game',
   },
   {
     id: 'jscalculator',
@@ -110,7 +110,7 @@ const projectOverview = [
     title: 'Calculator',
     description: 'How good is your maths?',
     github: 'https://github.com/cazyw/calculator',
-    demo: 'https://cazyw.github.io/calculator'
+    demo: 'https://cazyw.github.io/calculator',
   },
   {
     id: 'jstictactoe',
@@ -119,7 +119,7 @@ const projectOverview = [
     title: 'Tic Tac Toe',
     description: 'Can you beat the computer?',
     github: 'https://github.com/cazyw/tic-tac-toe',
-    demo: 'https://cazyw.github.io/tic-tac-toe'
+    demo: 'https://cazyw.github.io/tic-tac-toe',
   },
   {
     id: 'htmldoctorwho',
@@ -128,7 +128,7 @@ const projectOverview = [
     title: 'First website using Bootstrap',
     description: 'Bootstrap is awesome!',
     github: 'https://github.com/cazyw/time-and-space/tree/gh-pages',
-    demo: 'https://cazyw.github.io/time-and-space'
+    demo: 'https://cazyw.github.io/time-and-space',
   },
   {
     id: 'jspomodoro',
@@ -137,7 +137,7 @@ const projectOverview = [
     title: 'Pomodoro Timer',
     description: "It's studying time!",
     github: 'https://github.com/cazyw/pomodoro-clock',
-    demo: 'https://cazyw.github.io/pomodoro-clock'
+    demo: 'https://cazyw.github.io/pomodoro-clock',
   },
   {
     id: 'jsquote',
@@ -146,7 +146,7 @@ const projectOverview = [
     title: 'Quote Generator',
     description: 'Life lessons from those far wiser',
     github: 'https://github.com/cazyw/quote-generator',
-    demo: 'https://cazyw.github.io/quote-generator'
+    demo: 'https://cazyw.github.io/quote-generator',
   },
   {
     id: 'jsweather',
@@ -155,7 +155,7 @@ const projectOverview = [
     title: 'Weather App',
     description: "What's the weather in your area?",
     github: 'https://github.com/cazyw/local-weather',
-    demo: 'https://cazyw.github.io/local-weather'
+    demo: 'https://cazyw.github.io/local-weather',
   },
   {
     id: 'jswikipedia',
@@ -164,7 +164,7 @@ const projectOverview = [
     title: 'Wikipedia viewer',
     description: 'Plug into Wikipedia to find stuff',
     github: 'https://github.com/cazyw/wikipedia-viewer',
-    demo: 'https://cazyw.github.io/wikipedia-viewer'
+    demo: 'https://cazyw.github.io/wikipedia-viewer',
   },
   {
     id: 'jstwitch',
@@ -173,7 +173,7 @@ const projectOverview = [
     title: 'Twitch Streams',
     description: "Streams I'm following...maybe",
     github: 'https://github.com/cazyw/twitchTV',
-    demo: 'https://cazyw.github.io/twitchTV'
+    demo: 'https://cazyw.github.io/twitchTV',
   },
   {
     id: 'pybackup',
@@ -182,7 +182,7 @@ const projectOverview = [
     title: 'File Backup',
     description: 'Simple file backup program in python',
     github: 'https://github.com/cazyw/python-file-backup',
-    demo: 'backup_screenshots.html'
+    demo: 'backup_screenshots.html',
   },
   {
     id: 'pywebsite',
@@ -191,7 +191,7 @@ const projectOverview = [
     title: 'Website Builder',
     description: 'Python script to generate webpages from text files',
     github: 'https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py',
-    demo: 'https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py'
+    demo: 'https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py',
   },
   {
     id: 'reactclock',
@@ -200,7 +200,7 @@ const projectOverview = [
     title: 'Clock built with React',
     description: "What's the current time?",
     github: 'https://github.com/cazyw/LS-Pro-React-II',
-    demo: 'https://cazyw.github.io/LS-Pro-React-II'
+    demo: 'https://cazyw.github.io/LS-Pro-React-II',
   },
   {
     id: 'pyspaceship',
@@ -209,7 +209,7 @@ const projectOverview = [
     title: 'Spaceship Shooter',
     description: 'Feel like shooting some asteroids?',
     github: 'https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py',
-    demo: 'https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py'
+    demo: 'https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py',
   },
   {
     id: 'pypong',
@@ -218,7 +218,7 @@ const projectOverview = [
     title: 'Pong Game',
     description: 'An old-time classic',
     github: 'https://github.com/cazyw/coding-challenges/tree/master/canvas',
-    demo: 'https://cazyw.github.io/fun/pong.html'
+    demo: 'https://cazyw.github.io/fun/pong.html',
   },
   {
     id: 'canvassnake',
@@ -227,13 +227,13 @@ const projectOverview = [
     title: 'Snake',
     description: 'Old-time classic before smartphones',
     github: 'https://github.com/cazyw/coding-challenges/tree/master/canvas',
-    demo: 'https://cazyw.github.io/fun/snake.html'
-  }
+    demo: 'https://cazyw.github.io/fun/snake.html',
+  },
 ];
 
 const insertIcons = () => {
   const iconSection = icons
-    .map(icon => {
+    .map((icon) => {
       let temp = iconTemplate;
       return temp.replace('DEVICONS', icon);
     })
@@ -243,7 +243,7 @@ const insertIcons = () => {
 
 const insertProjects = () => {
   const projectSection = projectOverview
-    .map(proj => {
+    .map((proj) => {
       let temp = projectTemplate;
       return temp
         .replace('PROJECT_ANCHOR', proj['anchor'])
