@@ -342,13 +342,17 @@ document.body.addEventListener('click', function(event) {
 // });
 
 document.body.addEventListener('click', function(event) {
-  event.preventDefault();
   console.log(event);
   if (event.target && event.target.tagName === 'A') {
+    event.preventDefault();
     reply_click(event.target.hash.replace('#', ''));
   } else if (event.target && event.target.classList.contains('link')) {
     reply_click(event.srcElement.parentNode.hash.replace('#', ''));
   }
+
+  // if (event.target && event.target.classList.contains('project-box-description')) {
+  //   toggleProjectSummary(event.target.parentNode.childNodes[5]);
+  // }
 });
 
 let call;
@@ -378,9 +382,9 @@ function reply_click(target) {
 }
 
 document.addEventListener('click', function(event) {
-  event.preventDefault();
   console.log(event);
   if (event.target && event.target.className === 'fa fa-commenting-o link') {
+    event.preventDefault();
     console.log('details clicked', event.target.parentNode);
     const project = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.id;
     console.log('project', project);
