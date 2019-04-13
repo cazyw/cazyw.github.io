@@ -11,38 +11,30 @@ header {
   height: 400px;
   padding-top: 100px;
   background-color: rbg(0, 0, 0);
-  background-image: url("../img/header.jpg");
+  background-image: url('../img/header.jpg');
   background-size: cover;
   background-position: 0% 50%;
   text-align: center;
-  color: #FFF;
+  color: #fff;
 }
-
 
 h1 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3em;
-  text-shadow: 0 0 30px rgb(30, 30, 30),
-              0 1px 30px rgb(30, 30, 30),
-              0 2px 30px rgb(30, 30, 30),
-              0 3px 30px rgb(30, 30, 30);
+  text-shadow: 0 0 30px rgb(30, 30, 30), 0 1px 30px rgb(30, 30, 30), 0 2px 30px rgb(30, 30, 30),
+    0 3px 30px rgb(30, 30, 30);
 }
 
 h3 {
   font-size: 1.5em;
-  text-shadow: 0 0 30px rgb(30, 30, 30),
-              0 -7px 30px rgb(30, 30, 30),
-              0 -5px 30px rgb(30, 30, 30),
-              0 -3px 30px rgb(30, 30, 30),
-              0 1px 30px rgb(30, 30, 30),
-              0 2px 30px rgb(30, 30, 30),
-              0 5px 30px rgb(30, 30, 30),
-              0 7px 30px rgb(30, 30, 30);
+  text-shadow: 0 0 30px rgb(30, 30, 30), 0 -7px 30px rgb(30, 30, 30), 0 -5px 30px rgb(30, 30, 30),
+    0 -3px 30px rgb(30, 30, 30), 0 1px 30px rgb(30, 30, 30), 0 2px 30px rgb(30, 30, 30), 0 5px 30px rgb(30, 30, 30),
+    0 7px 30px rgb(30, 30, 30);
 }
 
 hr {
-  border: 2px solid #00539F;
+  border: 2px solid #00539f;
   width: 50px;
 }
 
@@ -61,7 +53,6 @@ ul {
   padding: 0px;
 }
 
-
 a {
   cursor: pointer;
 }
@@ -77,11 +68,10 @@ a {
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand {
   color: rgb(255, 203, 0);
-
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #FFF;
+  color: #fff;
 }
 
 .navbar-default .navbar-nav > .active > a {
@@ -104,7 +94,6 @@ a {
 .navbar-default .navbar-toggle:focus {
   border: 0;
   background-color: rgb(54, 119, 179);
-
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -112,16 +101,14 @@ a {
   height: 3px;
 }
 
-
-
 .color-bg {
   background-color: rgb(54, 119, 179);
-  color: #FFF;
+  color: #fff;
   padding: 30px 0px;
 }
 
 .color-bg hr {
-  border-color: #FFF;
+  border-color: #fff;
 }
 
 .text-faded {
@@ -172,16 +159,33 @@ a {
   height: 100%;
   background-color: rgba(0, 83, 159, 0.9);
   opacity: 0;
-  -webkit-transition: all .25s ease;
-  -moz-transition: all .25s ease;
-  -ms-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   visibility: hidden;
   cursor: pointer;
   max-width: 650px;
 }
 
-@media only screen and (min-width : 480px) {
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.collapse {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.collapse.show {
+  display: block;
+  max-height: 99em;
+  transition: max-height 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 480px) {
   .project-box:hover .project-box-description {
     position: absolute;
     left: 0;
@@ -195,7 +199,7 @@ a {
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   header {
     height: 300px;
   }
@@ -213,25 +217,23 @@ a {
   }
 }
 
-@media screen and (max-width: 1920px){
+@media screen and (max-width: 1920px) {
   header {
-    background-image: url("../img/header1920.jpg");
+    background-image: url('../img/header1920.jpg');
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   header {
-    background-image: url("../img/header768.jpg");
+    background-image: url('../img/header768.jpg');
   }
 }
 
-@media screen and (max-width: 576){
+@media screen and (max-width: 576) {
   header {
-    background-image: url("../img/header576.jpg");
+    background-image: url('../img/header576.jpg');
   }
 }
-
-
 
 .box-clicked .project-box-description {
   position: absolute;
@@ -265,7 +267,7 @@ a {
 .project-description {
   font-size: 1.4em;
   padding: 0px 10px;
-  color: #FFF;
+  color: #fff;
 }
 
 .project-icons {
@@ -280,7 +282,7 @@ a {
 
 .project-icons a {
   font-size: 2em;
-  color: #FFF;
+  color: #fff;
 }
 
 .project-buttons {
@@ -290,7 +292,7 @@ a {
 }
 
 .project-buttons .btn-default {
-  color: #00539F;
+  color: #00539f;
   font-weight: 700;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -301,14 +303,13 @@ a {
 }
 
 .fa-chevron-up {
-  color: #FFCB00;
+  color: #ffcb00;
   float: right;
 }
 
 #projectDetails p a {
-  color: #FFF;
+  color: #fff;
 }
-
 
 #details {
   padding-top: 30px;
@@ -324,45 +325,44 @@ a {
 
 @keyframes fadein {
   from {
-    opacity:0;
+    opacity: 0;
     max-height: 0;
-
   }
   to {
-    opacity:1;
+    opacity: 1;
     max-height: 1000px;
   }
 }
 @-moz-keyframes fadein {
   /* Firefox */
   from {
-    opacity:0;
+    opacity: 0;
     max-height: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
     max-height: 1000px;
   }
 }
 @-webkit-keyframes fadein {
   /* Safari and Chrome */
   from {
-    opacity:0;
+    opacity: 0;
     max-height: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
     max-height: 1000px;
   }
 }
 @-o-keyframes fadein {
   /* Opera */
   from {
-    opacity:0;
+    opacity: 0;
     max-height: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
     max-height: 1000px;
   }
 }
@@ -375,14 +375,12 @@ a {
   border-style: solid;
   border-width: 0px;
   border-radius: 0;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 #gitHubLogo {
   width: 50px;
 }
-
-
 
 #contact {
   min-height: 150px;
