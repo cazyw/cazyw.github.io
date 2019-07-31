@@ -192,7 +192,7 @@ let projects = {
     <p>This was my first project with a React front-end, a more comprehensive Express server, and connecting to a MongoDB database. I also started to include more testing in my project. Checkout the Github Repo for more details.</p>\
     <p>My current project - this is a work in progress.</p>',
     github: 'https://github.com/cazyw/shakespeare-quotes',
-    demo: 'https://shakespeare-sunday.herokuapp.com/'
+    demo: 'https://shakespeare.cazcodes.dev/'
   },
   canvassnake: {
     aim: 'Use HTML5, Canvas and Javascript to build old-school classic games',
