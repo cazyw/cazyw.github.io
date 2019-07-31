@@ -1,37 +1,45 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "Calendar for collaboration",
-  "main": "index.js",
+  "name": "cazyw.github.io",
+  "private": true,
+  "description": "Profile page with Gatsby",
+  "version": "0.1.0",
+  "author": "cazyw",
+  "dependencies": {
+    "gatsby": "^2.13.45",
+    "gatsby-image": "^2.2.7",
+    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-offline": "^2.2.4",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sharp": "^2.2.9",
+    "gatsby-source-filesystem": "^2.1.7",
+    "gatsby-transformer-sharp": "^2.2.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./public/index.html --hmr-port 1235",
-    "build": "parcel build ./src/index.html/"
+    "build": "gatsby build",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cazyw/calendar-colab.git"
+    "url": "https://github.com/cazyw/cazyw.github.io.git"
   },
-  "author": "cazyw",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cazyw/calendar-colab/issues"
-  },
-  "homepage": "https://github.com/cazyw/calendar-colab#readme",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "parcel-bundler": "^1.12.3"
-  },
-  "dependencies": {
-    "moment": "^2.24.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1"
+    "url": "https://github.com/cazyw/cazyw.github.io/issues"
   }
 }
