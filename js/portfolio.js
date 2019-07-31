@@ -1,6 +1,4 @@
-/*eslint-disable*/
 // Object structure: information for each project
-
 let projects = {
   pybackup: {
     aim: 'Build a simple file backup program using Python.',
@@ -217,32 +215,60 @@ let projects = {
   }
 };
 
-// When a project thumbnail is selected, the project details are added to the webpage
-let projectDetails = project => {
-  let aim = `<h2>${projects[project]['aim']}</h2>`;
-  let skills = `<div class=\"text-faded\"><p>${projects[project]['skills']}</p></div>`;
-  let details = `<div class=\"text-faded\">${projects[project]['description']}</div>`;
-  let githubrepo = `<div class=\"text-center project-buttons\"><a href=\"${
+const buildAim = (project, projectDetails) => {
+  const aim = document.createElement('h2');
+  aim.textContent = `${projects[project]['aim']}`;
+  projectDetails.appendChild(aim);
+};
+
+const buildSkills = (project, projectDetails) => {
+  const skills = document.createElement('div');
+  skills.classList.add('text-faded');
+  skills.innerHTML = `<p>${projects[project]['skills']}</p>`;
+  projectDetails.appendChild(skills);
+};
+
+const buildDetails = (project, projectDetails) => {
+  const details = document.createElement('div');
+  details.classList.add('text-faded');
+  details.innerHTML = `${projects[project]['description']}`;
+  projectDetails.appendChild(details);
+};
+
+const buildGitHubDemoButtons = (project, projectDetails) => {
+  const githubrepo = document.createElement('div');
+  githubrepo.classList.add('text-center');
+  githubrepo.classList.add('project-buttons');
+  githubrepo.innerHTML = `<a href="${
     projects[project]['github']
-  }\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">GitHub Repo</a>`;
-  let demo = `<a href=\"${
+  }" target="_blank" class="btn btn-default btn-sm sr-button">GitHub Repo</a>`;
+  githubrepo.innerHTML += `<a href="${
     projects[project]['demo']
-  }\" target=\"_blank\" class=\"btn btn-default btn-sm sr-button\">Demo</a></div>`;
-  let linkBack = `<div><a href=\"#${project}-anchor\"><i class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></a></div>`;
-  $('#projectDetails')
-    .html(aim + skills + details + githubrepo + ' ' + demo + linkBack)
-    .fadeIn();
-  $('#details').css({ 'padding-top': '30px', 'padding-bottom': '30px' });
+  }" target="_blank" class="btn btn-default btn-sm sr-button">Demo</a></div>`;
+  projectDetails.appendChild(githubrepo);
 };
 
-let toggleDescription = elem => {
-  elem.toggleClass('box-clicked');
+const buildLinkBack = (project, projectDetails) => {
+  const linkBack = document.createElement('div');
+  linkBack.innerHTML = `<div><a href="#${project}-anchor"><i class="fa fa-chevron-up link" aria-hidden="true"></i></a></div>`;
+  projectDetails.appendChild(linkBack);
 };
 
-let checkToggle = elem => {
-  if (!elem.hasClass('box-clicked')) {
-    toggleDescription(elem);
-  }
+// When a project thumbnail is selected, the project details are added to the webpage
+const projectDetails = project => {
+  const projectDetails = document.getElementById('projectDetails');
+
+  buildAim(project, projectDetails);
+  buildSkills(project, projectDetails);
+  buildDetails(project, projectDetails);
+  buildGitHubDemoButtons(project, projectDetails);
+  buildLinkBack(project, projectDetails);
+};
+
+// toggles the project summary overlay
+const toggleProjectSummary = elem => {
+  console.log(elem.classList);
+  elem.classList.contains('box-clicked') ? elem.classList.remove('box-clicked') : elem.classList.add('box-clicked');
 };
 
 // gets the position to insert the project details box
@@ -254,14 +280,15 @@ let insertProjectBoxPosition = element => {
   const sm = 768;
   const lg = 1200;
 
-  let windowWidth = $(window).innerWidth();
+  let projectSelectedPosition = 0;
+  console.log(element.parentNode.parentNode.parentNode.parentNode.parentNode);
+  let projectBox = element.parentNode.parentNode.parentNode.parentNode.parentNode;
+  while ((projectBox = projectBox.previousElementSibling)) {
+    projectSelectedPosition++;
+  }
+
+  const windowWidth = window.innerWidth;
   let insertPosition;
-
-  let projectSelectedPosition = $(element)
-    .parents('.project-box')
-    .parent()
-    .index();
-
   if (windowWidth < sm) {
     insertPosition = projectSelectedPosition;
   } else if (windowWidth < lg) {
@@ -273,70 +300,155 @@ let insertProjectBoxPosition = element => {
   return insertPosition;
 };
 
-// the box which displays details about the project
-let toggleProjectBox = element => {
-  $('#details').remove(); // remove existing box
-
-  const insertProjectDetailsBox = html => {
-    let el = document.createElement('div');
-    el.innerHTML = html;
-    return el.childNodes[0];
-  };
-  let box =
-    '<div id="details" class="col-xs-12 color-bg anchor"><div class="container"><div id="projectDetails" class="projectDetails"></div></div></div>';
-
-  $('.col-lg-4.col-sm-6.col-xs-12')[insertProjectBoxPosition(element)].after(insertProjectDetailsBox(box));
-  $('#details').css('padding', '0px');
+const insertProjectDetailsBox = html => {
+  let el = document.createElement('div');
+  el.innerHTML = html;
+  return el.childNodes[0];
 };
 
-$(document).ready(function() {
-  $(document).on('click', '.project-box', function(event) {
-    toggleDescription($(this));
-  });
+// the box which displays details about the project
+const toggleProjectBox = element => {
+  console.log('toggleProjectBox', element);
+  const details = document.getElementById('details');
+  if (details) {
+    details.parentNode.removeChild(details);
+  }
 
-  $(document).on('click', '.fa-chevron-up', function(event) {
-    setTimeout(function() {
-      $('#details').remove();
+  let box =
+    '<div id="details" class="col-xs-12 color-bg anchor"><div class="container"><div id="projectDetails" class=""></div></div></div>';
+
+  // the project to insert details box after
+  const precedingElement = document.querySelectorAll('.col-lg-4.col-sm-6.col-xs-12')[insertProjectBoxPosition(element)];
+  precedingElement.parentNode.insertBefore(insertProjectDetailsBox(box), precedingElement.nextSibling);
+};
+
+// Add event listeners
+
+document.body.addEventListener('click', function(event) {
+  if (event.target && event.target.classList.contains('fa-chevron-up')) {
+    setTimeout(() => {
+      const details = document.getElementById('details');
+      details.parentNode.removeChild(details);
     }, 1000);
-  });
-
-  $(document).on('click', '.project-details', function(event) {
-    toggleProjectBox($(this));
-
-    let project = $(this)
-      .parents('.project-box')
-      .attr('id');
-    $('#projectDetails').fadeOut(function() {
-      projectDetails(project);
-    });
-
-    event.preventDefault();
-    checkToggle($(this).parents('.project-box'));
-  });
-
-  $(document).on('click', 'a[href^="#"]', function(event) {
-    let anchor = this.hash;
-    const buffer = 20;
-    $('html, body').animate(
-      {
-        scrollTop: $(anchor).offset().top - buffer
-      },
-      1000,
-      function() {
-        window.location.hash = anchor - buffer;
-      }
-    );
-    event.preventDefault();
-  });
-
-  $('.navbar-collapse ul li a').on('click', function(event) {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  gmail = 'gmail.com';
-  emailAdd = 'kazeisc' + '@' + gmail;
-  $('.contact-linkedin').attr('href', `https://www.linkedin.com/in/carol-w-2a3b1646`);
+  }
 });
+
+// document.body.addEventListener('click', function(event) {
+//   event.preventDefault();
+//   console.log(event, event.target.className);
+//   if (event.target && event.target.className === 'project-box-description') {
+//     toggleProjectSummary(this);
+//   }
+// });
+
+document.body.addEventListener('click', function(event) {
+  console.log(event);
+  if (event.target && event.target.tagName === 'A') {
+    event.preventDefault();
+    scrollToElement(event.target.hash.replace('#', ''));
+  } else if (event.target && event.target.classList.contains('link')) {
+    scrollToElement(event.srcElement.parentNode.hash.replace('#', ''));
+  }
+
+  // if (event.target && event.target.classList.contains('project-box-description')) {
+  //   toggleProjectSummary(event.target.parentNode.childNodes[5]);
+  // }
+});
+
+let call;
+let targetElement;
+let bounding = 0;
+let scrolling = false;
+
+function scroll() {
+  bounding = Math.round(targetElement.getBoundingClientRect().y);
+  const windowHeight = window.innerHeight;
+  const docHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight);
+  const windowBottom = windowHeight + window.pageYOffset;
+  console.log('scrolling', bounding);
+
+  if (bounding > 40 && bounding <= 50) {
+    clearScroll();
+    return;
+  }
+
+  if (bounding > 50) {
+    if (windowBottom >= docHeight) {
+      clearScroll();
+      return;
+    }
+    document.documentElement.scrollTop += 5;
+    return;
+  }
+
+  if (bounding < 40) {
+    if (document.documentElement.scrollTop === 0) {
+      clearScroll();
+      return;
+    }
+    document.documentElement.scrollTop -= 5;
+    return;
+  }
+
+  clearScroll();
+  return;
+}
+
+function clearScroll() {
+  scrolling = false;
+  clearInterval(call);
+}
+
+function scrollToElement(target) {
+  if (scrolling) {
+    clearScroll();
+  }
+
+  scrolling = true;
+  setTimeout(() => {
+    targetElement = document.getElementById(target);
+    call = setInterval(scroll, 5);
+  }, 500);
+}
+
+document.addEventListener('click', function(event) {
+  console.log(event);
+  if (event.target && event.target.className === 'fa fa-commenting-o link') {
+    event.preventDefault();
+    console.log('details clicked', event.target.parentNode);
+    const project = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+    console.log('project', project);
+    toggleProjectBox(event.target.parentNode);
+    projectDetails(project);
+  }
+});
+
+document.addEventListener('click', function(event) {
+  event.preventDefault();
+  console.log(event.target.parentNode.parentNode.parentNode.className);
+  if (event.target && event.target.parentNode.parentNode.parentNode.className === 'navbar-collapse collapse in') {
+    collapse('.navbar-collapse', 'toggle');
+  }
+});
+
+// map our commands to the classList methods
+const fnmap = {
+  toggle: 'toggle',
+  show: 'add',
+  hide: 'remove'
+};
+const collapse = (selector, cmd) => {
+  const targets = Array.from(document.querySelectorAll(selector));
+  targets.forEach(target => {
+    target.classList[fnmap[cmd]]('show');
+  });
+};
+
+// $(document).ready(function() {
+//   $('.navbar-collapse ul li a').on('click', function(event) {
+//     // $('.navbar-collapse').collapse('hide');
+//   });
+// });
 
 // Polyfill required for Microsoft Edge and IE 9 and above
 

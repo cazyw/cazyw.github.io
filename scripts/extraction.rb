@@ -1,10 +1,10 @@
 #!/usr/bin/ruby
 
 ###################################################
-# Ruby script to extract all the project details 
-# from the project tiles and devicons  in index.html
+# Ruby script to extract all the project details
+# from the project tiles and devicons in index.html
 # and write to projects.json and icons.json
-# 
+#
 # This script is no longer relevant since the data
 # has already been extracted and index.html has
 # changed (is now dynamically generated)
@@ -66,7 +66,7 @@ File.open("../index.html") do |file|
     file.write(JSON.pretty_generate(projects))
     puts "JSON file generated (projects.json)"
   end
-  
+
   # writes to a .json file
   File.open('../data/icons.json', 'w+') do |file|
     file.write(devicons.to_json)
