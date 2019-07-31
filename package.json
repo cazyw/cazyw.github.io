@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Calendar for collaboration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./src/index.html --hmr-port 1235",
+    "build": "parcel build ./src/index.html/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cazyw/calendar-colab.git"
+  },
+  "author": "cazyw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cazyw/calendar-colab/issues"
+  },
+  "homepage": "https://github.com/cazyw/calendar-colab#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1"
+  }
+}
