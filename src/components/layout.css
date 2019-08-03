@@ -624,15 +624,6 @@ pre tt:after {
   --main-bg-color: rgb(54, 119, 179);
 }
 
-@font-face {
-  font-family: ExampleFont;
-  src: url(/path/to/fonts/examplefont.woff) format("woff"),
-    url(/path/to/fonts/examplefont.eot) format("eot");
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
-}
-
 *,
 ::after,
 ::before {
@@ -648,6 +639,7 @@ html {
 
 body {
   font-family: "Ubuntu", sans-serif;
+  font-display: fallback;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
