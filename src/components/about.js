@@ -35,7 +35,7 @@ const About = () => (
         <div
           style={{
             backgroundColor: `rgb(255,255,255)`,
-            width: `120px`,
+            width: `115px`,
             height: `44px`,
             padding: `5px 10px`,
             margin: `30px auto`,
@@ -54,7 +54,7 @@ const About = () => (
           <img
             style={{
               display: `inline-block`,
-              width: `55px`,
+              width: `60px`,
               verticalAlign: `middle`,
               paddingLeft: `5px`,
             }}
