@@ -24,24 +24,25 @@ const About = () => (
         Below are some of the projects I've made over the years and some I'm
         working on now.
       </p>
-      <a
-        style={{ color: `rgb(255, 255, 255)` }}
-        href="https://github.com/cazyw"
-        title="Github cazyw"
-        target="_blank"
-        rel="external"
-        margin="auto"
+
+      <div
+        style={{
+          backgroundColor: `rgb(255,255,255)`,
+          width: `115px`,
+          height: `44px`,
+          padding: `5px 10px`,
+          margin: `30px auto`,
+          borderRadius: `300px`,
+          border: `1px solid rgb(204, 204, 204)`,
+        }}
       >
-        <div
-          style={{
-            backgroundColor: `rgb(255,255,255)`,
-            width: `115px`,
-            height: `44px`,
-            padding: `5px 10px`,
-            margin: `30px auto`,
-            borderRadius: `300px`,
-            border: `1px solid rgb(204, 204, 204)`,
-          }}
+        <a
+          style={{ color: `rgb(255, 255, 255)` }}
+          href="https://github.com/cazyw"
+          title="Github cazyw"
+          target="_blank"
+          rel="external"
+          margin="auto"
         >
           <img
             style={{
@@ -61,8 +62,8 @@ const About = () => (
             src={githubLogo}
             alt="GitHub Logo"
           />
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </section>
 )
