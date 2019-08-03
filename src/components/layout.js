@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Header from "./header"
+import About from "./about"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -32,6 +33,7 @@ const Layout = ({ children }) => {
         />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <About />
       <div
         style={{
           margin: `0 auto`,
