@@ -27,6 +27,7 @@ const About = () => (
       <a
         style={{ color: `rgb(255, 255, 255)` }}
         href="https://github.com/cazyw"
+        title="Github cazyw"
         target="_blank"
         rel="external"
         margin="auto"
