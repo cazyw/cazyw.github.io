@@ -1,4 +1,4 @@
-html {
+/* html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -6,7 +6,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 /* article,
 aside,
 details,
@@ -620,36 +620,60 @@ pre tt:after {
   }
 } */
 
+:root {
+  --main-bg-color: rgb(54, 119, 179);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 html {
   width: 100%;
   height: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
   height: 300px;
   padding-top: 100px;
-  background-color: rbg(0, 0, 0);
-  background-image: url("../images/header1920.webp");
+  background-image: url("../images/header576.webp");
   background-size: cover;
   background-position: 0% 50%;
   text-align: center;
   color: #fff;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-align: center;
+}
+
 h1 {
+  font-size: 2em;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 3em;
   text-shadow: 0 0 30px rgb(30, 30, 30), 0 1px 30px rgb(30, 30, 30),
     0 2px 30px rgb(30, 30, 30), 0 3px 30px rgb(30, 30, 30);
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-shadow: 0 0 30px rgb(30, 30, 30), 0 -7px 30px rgb(30, 30, 30),
     0 -5px 30px rgb(30, 30, 30), 0 -3px 30px rgb(30, 30, 30),
     0 1px 30px rgb(30, 30, 30), 0 2px 30px rgb(30, 30, 30),
@@ -662,13 +686,14 @@ hr {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 20px;
 }
 
 footer {
   text-align: center;
   padding-bottom: 20px;
+  font-size: 0.7em;
 }
 
 ul {
@@ -678,4 +703,42 @@ ul {
 
 a {
   cursor: pointer;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#about {
+  background-color: var(--main-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 400px;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background-image: url("../images/header768.webp");
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  header {
+    background-image: url("../images/header1920.webp");
+  }
 }
