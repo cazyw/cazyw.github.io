@@ -27,12 +27,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Ubuntu:400,700"
-          rel="stylesheet"
-        />
-      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <About />
       <div
