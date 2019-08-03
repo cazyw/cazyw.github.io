@@ -789,10 +789,11 @@ header {
   height: 300px;
   padding-top: 100px;
   background-image: url("../images/header576.webp");
+  background-color: rgb(30, 30, 30);
   background-size: cover;
   background-position: 0% 50%;
   text-align: center;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 h1,
