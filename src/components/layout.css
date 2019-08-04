@@ -852,14 +852,14 @@ a {
 
 .devicons-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(3em, 1fr));
-  grid-gap: 1.5rem;
-  margin: 10px 10px;
+  grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
+  grid-gap: 2rem;
+  margin: 20px 20px;
   padding-left: 0px;
 }
 
 .devicons {
-  max-width: 3em;
+  max-width: 4em;
 }
 
 .devicon-typescript-plain .cls-1 {
