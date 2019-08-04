@@ -41,7 +41,7 @@ const About = () => (
           href="https://github.com/cazyw"
           title="Github cazyw"
           target="_blank"
-          rel="external"
+          rel="external noopener"
           margin="auto"
         >
           <img
