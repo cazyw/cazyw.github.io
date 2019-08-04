@@ -851,6 +851,26 @@ a {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.devicons-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
+  margin: 30px 50px;
+}
+
+/* .devicons-section li {
+  place-self: center;
+}*/
+
+.devicons {
+  max-width: 3em;
+}
+
+/* for mocha svg */
+.cls-1 {
+  fill: #8d6748;
+}
+
 #about {
   background-color: var(--main-bg-color);
 }
