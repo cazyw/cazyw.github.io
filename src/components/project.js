@@ -6,7 +6,7 @@ const Project = () => (
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
+        // maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
@@ -14,7 +14,14 @@ const Project = () => (
       <hr />
       <ul className="projects-section">
         <li>
-          <Card image="../images/GitHub_Logo.png" />
+          <Card image="../images/react-express-shakespeare.webp">
+            <div className="project-box-text">
+              <div className="project-name">Shakespeare Quotes</div>
+              <div className="project-description">
+                To be or not to be, that is the question
+              </div>
+            </div>
+          </Card>
         </li>
       </ul>
     </div>
