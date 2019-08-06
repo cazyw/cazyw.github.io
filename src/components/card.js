@@ -28,7 +28,8 @@ class Card extends React.Component {
         <div className={"Card-Front" + frontCSS}>
           <img
             className="home-card-image"
-            src={require("../images/react-express-shakespeare.webp")}
+            src={this.props.imageSrc}
+            alt={this.props.imageAlt}
           />
         </div>
         <div className={"Card-Back" + backCSS}>{this.props.children}</div>
@@ -40,7 +41,8 @@ class Card extends React.Component {
 Card.defaultProps = {}
 
 Card.propTypes = {
-  image: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 

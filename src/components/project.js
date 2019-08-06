@@ -6,7 +6,6 @@ const Project = () => (
     <div
       style={{
         margin: `0 auto`,
-        // maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
@@ -14,11 +13,27 @@ const Project = () => (
       <hr />
       <ul className="projects-section">
         <li>
-          <Card image="../images/react-express-shakespeare.webp">
+          <Card
+            imageSrc={require("../images/react-express-shakespeare.webp")}
+            imageAlt={"Shakespeare Sunday Project"}
+          >
             <div className="project-box-text">
               <div className="project-name">Shakespeare Quotes</div>
               <div className="project-description">
                 To be or not to be, that is the question
+              </div>
+            </div>
+          </Card>
+        </li>
+        <li>
+          <Card
+            imageSrc={require("../images/js-spotify.webp")}
+            imageAlt={"Spotify Playlist Project"}
+          >
+            <div className="project-box-text">
+              <div className="project-name">Spotify Playlist Backup</div>
+              <div className="project-description">
+                Download track details from your playlists
               </div>
             </div>
           </Card>
