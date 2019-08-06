@@ -878,6 +878,18 @@ a {
   fill: #1c78c0;
 }
 
+.projects-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  grid-gap: 1rem;
+  margin: 20px 0px;
+  padding-left: 0px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
 #about {
   background-color: var(--main-bg-color);
 }
