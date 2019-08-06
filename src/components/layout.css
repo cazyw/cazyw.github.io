@@ -1,10 +1,5 @@
 :root {
   --main-bg-color: rgb(54, 119, 179);
-  --flip-duration: 1s;
-  --perspective: 15rem;
-  --degree: 90deg;
-  --degree-neg: -90deg;
-  --cardsize: 20em;
 }
 
 /* cyrillic-ext */
@@ -276,6 +271,7 @@ a {
 }
 
 .Card {
+  padding: 0px;
   margin: 0px;
   display: block;
   cursor: pointer;
@@ -290,7 +286,6 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  /* width: var(--cardsize); */
 }
 
 .Card .Card-Back p {
