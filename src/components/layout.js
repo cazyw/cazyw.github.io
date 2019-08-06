@@ -12,6 +12,7 @@ import Header from "./header"
 import Footer from "./footer"
 import About from "./about"
 import Technology from "./technology"
+import Project from "./project"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -27,20 +28,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <main>{children}</main>
       <Header siteTitle={data.site.siteMetadata.title} />
       <About />
       <Technology />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <Project />
+      <Footer />
     </>
   )
 }
