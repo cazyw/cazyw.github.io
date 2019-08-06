@@ -8,7 +8,6 @@ function Card({ image }) {
     <div className="card">
       <img
         className="home-card-image"
-        // eslint-disable-next-line no-undef
         src={require("../images/react-express-shakespeare.webp")}
       />
     </div>
