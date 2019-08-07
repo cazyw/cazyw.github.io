@@ -3,6 +3,7 @@ module.exports = {
     title: `Carol Wong`,
     description: `Portfolio`,
     author: `@cazyw`,
+    image: `https://cazyw.github.io/img/projects.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +12,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
       },
     },
     `gatsby-transformer-sharp`,
