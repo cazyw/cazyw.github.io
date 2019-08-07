@@ -24,15 +24,22 @@ class Card extends React.Component {
       backCSS = ""
     }
     return (
-      <div className="Card" onClick={this.flip}>
-        <div className={"Card-Front" + frontCSS}>
+      <div className="card" onClick={this.flip}>
+        <div className={"card-front" + frontCSS}>
           <img
             className="home-card-image"
             src={this.props.imageSrc}
             alt={this.props.imageAlt}
           />
         </div>
-        <div className={"Card-Back" + backCSS}>{this.props.children}</div>
+        <div className={"card-back" + backCSS}>
+          <div className="project-box-text">
+            <div className="project-name">{this.props.projectName}</div>
+            <div className="project-description">
+              {this.props.projectDescription}
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
@@ -43,7 +50,8 @@ Card.defaultProps = {}
 Card.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  projectName: PropTypes.string.isRequired,
+  projectDescription: PropTypes.string.isRequired,
 }
 
 export default Card

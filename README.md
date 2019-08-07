@@ -1,29 +1,11 @@
 # Profile Page
 
-My profile page which contains a collection of coding projects. Please see [cazyw.github.io](cazyw.github.io)
+My profile page contains a collection of coding projects on my journey in software development. Started whilst doing Free Code Camp (awesome free resource for those interested in getting into or trying out coding). Please see [cazcodes.dev](https://cazcodes.dev)
 
-## Discussion
+The website has undergone a number of iterations and did used to have some cool fancy jquery features. It was originally built using HTML, CSS, Javascript, Jquery, Bootstrap with some Ruby thrown in to do some migrations.
 
-Some cool things learnt/done and updated from the original version.
+Currently updating to use Gatsby, React, CSS Grid and Docker in development.
 
-### Dynamically calculating and inserting sections
+To query graphql using graphiQL while the server is running...
 
-Clicking on the **speech bubble** in each project tile opens up a section with a summary of the project. Initially this always appeared after the entire project section. As my number of projects expanded, this became unwieldy particularly on mobile devices where the projects are shown in a single column. I added the `insertProjectBoxPositio` function which 
-* obtains the `$(window).innerWidth();` 
-* checks this against the Bootstrap grid breakpoint sizes and calculates how many tiles are on each row (as the code uses **Bootstrap 3**)
-* inserts the Project Description section immediately after the row containing the tile selected
-
-e.g. if the second project is selected, and the browser is displaying three tiles in a row, the project details section will appear after the third tile (as that is the end of a row)
-
-**Note** `ChildNode.after` is used to insert the section after the calculated project tile. This is still experimental and will not work for older/unsupported browsers. A polyfill was required for Microsoft Edge and IE9+ as it is not yet supported and . See [MDN Web Docs Explanation](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/after).
-
-### Modularising the code
-
-Code blocks for project tiles were originally fully displayed in `index.html`, which grew the more projects were added. The code was modularised:
-* project and devicon data was extracted with a ruby script into `.json` files. This was then copied into `projects.js`  
-* `projects.js` dynamically generates the project tiles by populating a template with the data
-
-### To do
-Some things still to do:
-* convert jquery to javascript (js/portfolio.js)
-
+http://localhost:8000/___graphql
