@@ -12,6 +12,8 @@ const getProjectDescriptions = data => {
           imageAlt={item.node.title}
           projectName={item.node.title}
           projectDescription={item.node.description}
+          projectGithub={item.node.github}
+          projectDemo={item.node.demo}
         />
       </li>
     )

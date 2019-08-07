@@ -216,6 +216,22 @@ a {
   color: rgb(255, 255, 255);
 }
 
+.project-icons {
+  display: inline-grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 1em;
+}
+
+.project-icon {
+  padding: 2px;
+  margin: 10px 10px 0px 10px;
+  border-radius: 300px;
+}
+
+.card img.project-link-icon {
+  width: 3em;
+}
+
 #about {
   background-color: var(--main-bg-color);
 }

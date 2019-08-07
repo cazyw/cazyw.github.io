@@ -38,6 +38,36 @@ class Card extends React.Component {
             <div className="project-description">
               {this.props.projectDescription}
             </div>
+            <div className="project-icons">
+              <div className="project-icon">
+                <a
+                  href={this.props.projectGithub}
+                  target="_blank"
+                  rel="noopener"
+                  alt={this.props.projectGithub}
+                >
+                  <img
+                    className="project-link-icon"
+                    src={require("../images/github-logo-128.png")}
+                    alt="Github Icon"
+                  />
+                </a>
+              </div>
+              <div className="project-icon">
+                <a
+                  href={this.props.projectDemo}
+                  target="_blank"
+                  rel="noopener"
+                  alt={this.props.projectDemo}
+                >
+                  <img
+                    className="project-link-icon"
+                    src={require("../images/demo-128.png")}
+                    alt="Demo Icon"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
