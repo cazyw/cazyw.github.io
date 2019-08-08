@@ -9,3 +9,16 @@ Currently updating to use Gatsby, React, CSS Grid and Docker in development.
 To query graphql using graphiQL while the server is running...
 
 http://localhost:8000/___graphql
+
+## Docker
+
+Can either
+
+- use the options in the Makefile
+
+- use docker-compose
+
+```
+docker-compose build
+docker-compose run --rm nodedev sh
+```
