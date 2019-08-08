@@ -57,49 +57,4 @@ const Project = () => (
   />
 )
 
-// const data = useStaticQuery(graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//         author
-//         image
-//       }
-//     }
-//   }
-// `)
-
-// return (
-//   <section id="project">
-//     <div
-//       style={{
-//         margin: `0 auto`,
-//         padding: `1.45rem 1.0875rem`,
-//       }}
-//     >
-//       <h2>Projects</h2>
-//       <hr />
-//       <ul className="projects-section">
-//         <li>
-//           <Card
-//             imageSrc={require("../images/react-express-shakespeare.webp")}
-//             imageAlt={"Shakespeare Sunday Project"}
-//             projectName={"Shakespeare Quotes"}
-//             projectDescription={"To be or not to be, that is the question"}
-//           />
-//         </li>
-//         <li>
-//           <Card
-//             imageSrc={require("../images/js-spotify.webp")}
-//             imageAlt={"Spotify Playlist Project"}
-//             projectName={"Spotify Playlist Backup"}
-//             projectDescription={"Download track details from your playlists"}
-//           />
-//         </li>
-//       </ul>
-//     </div>
-//   </section>
-// )
-
 export default Project
