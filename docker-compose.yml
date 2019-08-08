@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nodedev:
+    build: .
+    image: node-10
+    command: sh
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    environment:
+      - GATSBY_WEBPACK_PUBLICPATH=/
+      - CHOKIDAR_USEPOLLING=1
