@@ -249,27 +249,33 @@ a {
   .devicons-section {
     margin: 30px 30px;
   }
+}
 
-  @media screen and (min-width: 1024px) {
-    .projects-section {
-      grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-    }
+@media screen and (min-width: 1000px) {
+  .projects-section {
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects-section {
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-section {
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  header {
+    background-image: url("../images/header1920.webp");
   }
 
-  @media screen and (min-width: 1200px) {
-    .projects-section {
-      grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
-    }
-  }
-
-  @media screen and (min-width: 1920px) {
-    header {
-      background-image: url("../images/header1920.webp");
-    }
-
-    .projects-section {
-      grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
-    }
+  .projects-section {
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
   }
 }
 

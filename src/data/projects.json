@@ -114,7 +114,7 @@
     "title": "File Backup",
     "description": "Simple file backup program in python",
     "github": "https://github.com/cazyw/python-file-backup",
-    "demo": "backup_screenshots.html"
+    "demo": "https://github.com/cazyw/python-file-backup"
   },
   {
     "id": "pywebsite",
@@ -133,14 +133,5 @@
     "description": "Feel like shooting some asteroids?",
     "github": "https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py",
     "demo": "https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py"
-  },
-  {
-    "id": "pypong",
-    "anchor": "pypong-anchor",
-    "image": "py-pong.webp",
-    "title": "Pong Game",
-    "description": "An old-time classic",
-    "github": "https://github.com/cazyw/coding-challenges/tree/master/canvas",
-    "demo": "https://cazyw.github.io/fun/pong.html"
   }
 ]
