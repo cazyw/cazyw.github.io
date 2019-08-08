@@ -145,41 +145,33 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .card .card-front {
   position: relative;
-  z-index: -1;
-  opacity: 0.2;
-  color: rgba(255, 255, 255, 0.6);
-  background-color: rgb(255, 255, 255);
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-.card .card-front.Visible {
   z-index: 1;
   opacity: 1;
+  background-color: rgb(255, 255, 255);
 }
 
 .card .card-back {
-  font-size: 0.9rem;
-  z-index: -1;
+  z-index: 1;
   opacity: 0;
-  color: rgba(255, 255, 255, 0.6);
-  /* background-color: rgba(0, 83, 159, 0.9); */
   background-color: rgba(2, 57, 127, 0.9);
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  transition: all 0.25s ease;
 }
 
-.card .card-back.Visible {
-  z-index: 1;
-  opacity: 0.9;
+.card:hover .card-front {
+  opacity: 0.2;
+}
+
+.card:hover .card-back {
+  opacity: 0.95;
 }
 
 .card .card-back p {
