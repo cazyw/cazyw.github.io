@@ -29,7 +29,9 @@
   ],
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf docs",
     "build": "gatsby build",
+    "github": "gatsby build && cp -r public docs",
     "develop": "gatsby develop --host 0.0.0.0 --port 8000",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
