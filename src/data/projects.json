@@ -124,14 +124,5 @@
     "description": "Python script to generate webpages from text files",
     "github": "https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py",
     "demo": "https://github.com/cazyw/time-and-space/blob/gh-pages/series/create_site.py"
-  },
-  {
-    "id": "pyspaceship",
-    "anchor": "pyspaceship-anchor",
-    "image": "py-spaceship.webp",
-    "title": "Spaceship Shooter",
-    "description": "Feel like shooting some asteroids?",
-    "github": "https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py",
-    "demo": "https://github.com/cazyw/interactive-python/blob/master/Wk8_RiceRocks.py"
   }
 ]
