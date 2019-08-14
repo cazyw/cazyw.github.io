@@ -1,13 +1,16 @@
 version: "3"
 services:
   nodedev:
-    build: .
-    image: node-10
+    container_name: docker_node
+    build: ./docker/
     command: sh
     volumes:
       - .:/app
+    working_dir: '/app'
+    command: ['/bin/sh', '-c', 'tail -f /dev/null']
     ports:
       - 8000:8000
     environment:
       - GATSBY_WEBPACK_PUBLICPATH=/
       - CHOKIDAR_USEPOLLING=1
+    restart: always

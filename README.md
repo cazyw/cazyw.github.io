@@ -21,6 +21,12 @@ Can either
 ```
 docker-compose build
 docker-compose run --rm -p 8000:8000 nodedev sh
-```
+// If the port isn't set here as well, it won't be exposed properly (as `0.0.0.0:8000->8000/tcp`)
 
-If the port isn't set here as well, it won't be exposed properly (as `0.0.0.0:8000->8000/tcp`)
+
+// Or
+
+docker-compose up --build -d
+docker-compose exec nodedev sh
+docker-compose down -v
+```
