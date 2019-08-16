@@ -3,7 +3,6 @@ module.exports = {
     title: `Carol Wong`,
     description: `Portfolio`,
     author: `@cazyw`,
-    image: `https://cazyw.github.io/img/projects.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
