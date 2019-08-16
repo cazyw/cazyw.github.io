@@ -224,6 +224,13 @@ a {
   width: 3em;
 }
 
+.contact-logos {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.8em;
+  padding: 0px 10px;
+}
+
 #about {
   background-color: var(--main-bg-color);
 }

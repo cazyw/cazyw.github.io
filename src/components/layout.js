@@ -13,6 +13,7 @@ import Footer from "./footer"
 import About from "./about"
 import Technology from "./technology"
 import Project from "./project"
+import Contact from "./contact"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -33,6 +34,7 @@ const Layout = ({ children }) => {
       <About />
       <Technology />
       <Project />
+      <Contact />
       <Footer />
     </>
   )
