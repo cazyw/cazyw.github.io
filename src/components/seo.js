@@ -48,7 +48,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://cazcodes.dev/${image}`,
+          content: `https://cazcodes.dev${image}`,
         },
         {
           property: `og:description`,
