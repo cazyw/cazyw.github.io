@@ -194,10 +194,13 @@ a {
 
 .card:hover .card-front {
   opacity: 0.2;
+  transform: translateY(-5px);
 }
 
 .card:hover .card-back {
   opacity: 0.95;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+  transform: translateY(-5px);
 }
 
 .card .card-back p {
