@@ -39,6 +39,9 @@ nav {
   font-weight: 700;
   background-color: rgb(54, 119, 179);
   border-bottom: 1px solid black;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 
 nav ul {
