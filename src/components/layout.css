@@ -38,10 +38,12 @@ nav {
   text-transform: uppercase;
   font-weight: 700;
   background-color: rgb(54, 119, 179);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0px;
   width: 100%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 nav ul {
