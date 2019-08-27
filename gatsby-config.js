@@ -3,6 +3,12 @@ module.exports = {
     title: `Carol Wong`,
     description: `Portfolio - Projects and Fun Stuff`,
     author: `@cazyw`,
+    menuLinks: [
+      { name: "about", link: "#about" },
+      { name: "tech", link: "#technology" },
+      { name: "projects", link: "#project" },
+      { name: "contact", link: "#contact" },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

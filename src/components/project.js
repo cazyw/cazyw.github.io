@@ -45,7 +45,7 @@ const Project = () => (
         <div
           style={{
             margin: `0 auto`,
-            padding: `1.45rem 1.0875rem`,
+            padding: `0.2rem 1.0875rem`,
           }}
         >
           <h2>Projects</h2>
