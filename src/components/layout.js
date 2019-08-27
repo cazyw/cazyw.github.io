@@ -18,13 +18,13 @@ import Contact from "./contact"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const [width, setWidth] = useState(window.innerWidth)
-
   useEffect(() => {
     const handleResize = () => {
-      const navs = document.querySelector(".nav-links")
-      if (window.innerWidth <= 650 && navs.classList.contains("open")) {
-        navs.classList.remove("open")
+      if (typeof window !== "undefined") {
+        const navs = document.querySelector(".nav-links")
+        if (window.innerWidth <= 650 && navs.classList.contains("open")) {
+          navs.classList.remove("open")
+        }
       }
     }
 
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  })
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
