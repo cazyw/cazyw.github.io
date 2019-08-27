@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
@@ -18,6 +18,23 @@ import Contact from "./contact"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const navs = document.querySelector(".nav-links")
+      if (window.innerWidth <= 650 && navs.classList.contains("open")) {
+        navs.classList.remove("open")
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
