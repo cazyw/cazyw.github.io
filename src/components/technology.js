@@ -7,7 +7,7 @@ const Technology = () => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `0.2rem 1.0875rem`,
       }}
     >
       <h2>Technologies</h2>

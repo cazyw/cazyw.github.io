@@ -4,7 +4,6 @@ module.exports = {
     description: `Portfolio - Projects and Fun Stuff`,
     author: `@cazyw`,
     menuLinks: [
-      { name: "home", link: "/" },
       { name: "about", link: "#about" },
       { name: "tech", link: "#technology" },
       { name: "projects", link: "#project" },

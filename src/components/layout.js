@@ -35,13 +35,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <main>{children}</main>
-      <Navbar menuLinks={data.site.siteMetadata.menuLinks} />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <About />
-      <Technology />
-      <Project />
-      <Contact />
-      <Footer />
+      <Navbar className="anchor" menuLinks={data.site.siteMetadata.menuLinks} />
+      <Header className="anchor" siteTitle={data.site.siteMetadata.title} />
+      <About className="anchor" />
+      <Technology className="anchor" />
+      <Project className="anchor" />
+      <Contact className="anchor" />
+      <Footer className="anchor" />
     </>
   )
 }
