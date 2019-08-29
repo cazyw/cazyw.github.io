@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
     const handleResize = () => {
       if (typeof window !== "undefined") {
         const navs = document.querySelector(".nav-links")
-        if (window.innerWidth <= 650 && navs.classList.contains("open")) {
+        if (navs.classList.contains("open") && window.innerWidth <= 650) {
           navs.classList.remove("open")
         }
       }

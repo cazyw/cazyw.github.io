@@ -76,7 +76,11 @@ section::before {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.nav-brand a,
+.nav-brand a {
+  display: block;
+  padding: 1rem;
+}
+
 .nav-link a {
   display: block;
   padding: 1rem;
@@ -94,15 +98,17 @@ nav a:hover {
   cursor: pointer;
   display: none;
   margin-left: auto;
-  padding: 8px;
-  margin-right: 12px;
+  padding-bottom: 9px;
+  padding-top: 11px;
+  margin-right: 20px;
 }
 
 .hamburger-lines {
-  width: 35px;
+  width: 30px;
   height: 3px;
   background-color: rgb(255, 255, 255);
-  margin-top: 7px;
+  margin-top: 5px;
+  border-radius: 300px;
 }
 
 @media only screen and (max-width: 650px) {
@@ -120,6 +126,10 @@ nav a:hover {
   .nav-links.open {
     display: block;
     margin-left: 0;
+  }
+
+  .nav-link a {
+    padding: 0.6rem;
   }
 
   .hamburger {
