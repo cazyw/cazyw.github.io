@@ -16,7 +16,6 @@ const Card = ({
         className="home-card-image"
         src={imageSrc}
         loading="lazy"
-        loading="lazy"
         alt={imageAlt}
       />
     </div>

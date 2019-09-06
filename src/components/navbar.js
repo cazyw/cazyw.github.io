@@ -30,7 +30,7 @@ const Navbar = ({ menuLinks }) => (
         <ul>
           {menuLinks.map(link => (
             <li key={link.name} className="nav-link" onClick={toggleMenu}>
-              <Link to={link.link}>{link.name}</Link>
+              <Link to={`/${link.link}`}>{link.name}</Link>
             </li>
           ))}
         </ul>

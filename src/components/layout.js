@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
@@ -40,6 +40,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          author
           menuLinks {
             name
             link
@@ -53,7 +54,7 @@ const Layout = ({ children }) => {
     <>
       <main>{children}</main>
       <Navbar className="anchor" menuLinks={data.site.siteMetadata.menuLinks} />
-      <Header className="anchor" siteTitle={data.site.siteMetadata.title} />
+      <Header className="anchor" siteTitle={data.site.siteMetadata.author} />
       <About className="anchor" />
       <Technology className="anchor" />
       <Project className="anchor" />
