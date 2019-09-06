@@ -12,7 +12,13 @@ const Card = ({
 }) => (
   <div className="card">
     <div className={"card-front"}>
-      <img className="home-card-image" src={imageSrc} alt={imageAlt} />
+      <img
+        className="home-card-image"
+        src={imageSrc}
+        loading="lazy"
+        loading="lazy"
+        alt={imageAlt}
+      />
     </div>
     <div className={"card-back"}>
       <div className="project-box-text">
