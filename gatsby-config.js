@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Carol Wong`,
-    description: `Portfolio - Projects and Fun Stuff`,
+    title: `Carol Wong | Projects Portfolio`,
+    description: `Carol Wong Projects Portfolio and Fun Stuff`,
     author: `@cazyw`,
     menuLinks: [
       { name: "about", link: "#about" },

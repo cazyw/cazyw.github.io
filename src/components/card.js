@@ -20,12 +20,7 @@ const Card = ({
         <div className="project-description">{projectDescription}</div>
         <div className="project-icons">
           <div className="project-icon">
-            <a
-              href={projectGithub}
-              target="_blank"
-              rel="noopener noreferrer"
-              alt={projectGithub}
-            >
+            <a href={projectGithub} target="_blank" rel="noopener noreferrer">
               <img
                 className="project-link-icon"
                 src={require("../images/github-logo-128.png")}
@@ -34,12 +29,7 @@ const Card = ({
             </a>
           </div>
           <div className="project-icon">
-            <a
-              href={projectDemo}
-              target="_blank"
-              rel="noopener noreferrer"
-              alt={projectDemo}
-            >
+            <a href={projectDemo} target="_blank" rel="noopener noreferrer">
               <img
                 className="project-link-icon"
                 src={require("../images/demo-128.png")}
