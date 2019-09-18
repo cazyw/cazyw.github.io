@@ -26,7 +26,7 @@ const Contact = () => (
           href="https://www.linkedin.com/in/carol-w-2a3b1646"
           title="Linkedin cazyw"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener external"
           margin="auto"
         >
           <img
@@ -39,7 +39,7 @@ const Contact = () => (
           href="https://github.com/cazyw"
           title="Github cazyw"
           target="_blank"
-          rel="external noopener noreferrer"
+          rel="external noopener external"
           margin="auto"
         >
           <img className="contact-logos" src={githubMark} alt="GitHub Logo" />
