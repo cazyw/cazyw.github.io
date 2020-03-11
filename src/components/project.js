@@ -50,6 +50,15 @@ const Project = () => (
         >
           <h2>Projects</h2>
           <hr />
+          <div
+            style={{
+              margin: `0 auto`,
+              padding: `1.0rem 2.0rem`,
+              textAlign: "center",
+            }}
+          >
+            Some personal projects I've worked on
+          </div>
           <ul className="projects-section">{getProjectDescriptions(data)}</ul>
         </div>
       </section>

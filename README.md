@@ -4,7 +4,7 @@ My profile page contains a collection of coding projects on my journey in softwa
 
 The website has undergone a number of iterations and did used to have some cool fancy jquery features. It was originally built using HTML, CSS, Javascript, Jquery, Bootstrap with some Ruby thrown in to do some migrations.
 
-Currently updating to use Gatsby, React, CSS Grid and Docker in development.
+Current version built using Gatsby, React, CSS Grid and Docker in development.
 
 To query graphql using graphiQL while the server is running...
 
