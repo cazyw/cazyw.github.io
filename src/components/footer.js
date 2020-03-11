@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => (
   <footer>
-    &copy; Carol Wong 2019 | Header photo by Fotis Fotopoulos on Unsplash |
+    &copy; Carol Wong 2020 | Header photo by Fotis Fotopoulos on Unsplash |
     Icons made by{" "}
     <a
       href="https://www.freepik.com/"
