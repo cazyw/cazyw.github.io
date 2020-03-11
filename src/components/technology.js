@@ -24,7 +24,6 @@ const Technology = () => (
       <ul className="devicons-section">
         <li>
           <svg className="devicons devicon-golang-plain" viewBox="0 0 128 128">
-            <path id="a" d="M18.8 1h90.5v126h-90.5z"></path>
             <path
               fillRule="evenodd"
               clipRule="evenodd"
