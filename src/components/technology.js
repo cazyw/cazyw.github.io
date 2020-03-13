@@ -23,7 +23,10 @@ const Technology = () => (
       </div>
       <ul className="devicons-section">
         <li>
-          <svg className="devicons devicon-golang-plain" viewBox="0 0 545 545">
+          <svg
+            className="devicons devicon-golang-plain"
+            viewBox="-70 0 545 545"
+          >
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
