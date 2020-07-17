@@ -51,6 +51,7 @@ const About = () => (
             }}
             src={githubMark}
             alt="GitHub Logo"
+            loading="lazy"
           />
           <img
             style={{
@@ -61,6 +62,7 @@ const About = () => (
             }}
             src={githubLogo}
             alt="GitHub Logo"
+            loading="lazy"
           />
         </a>
       </div>

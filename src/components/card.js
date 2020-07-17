@@ -17,6 +17,7 @@ const Card = ({
         src={imageSrc}
         loading="lazy"
         alt={imageAlt}
+        loading="lazy"
       />
     </div>
     <div className={"card-back"}>
@@ -30,6 +31,7 @@ const Card = ({
                 className="project-link-icon"
                 src={require("../images/github-logo-128.png")}
                 alt="Github Icon"
+                loading="lazy"
               />
             </a>
           </div>
@@ -39,6 +41,7 @@ const Card = ({
                 className="project-link-icon"
                 src={require("../images/demo-128.png")}
                 alt="Demo Icon"
+                loading="lazy"
               />
             </a>
           </div>

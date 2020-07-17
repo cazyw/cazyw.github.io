@@ -33,6 +33,7 @@ const Contact = () => (
             className="contact-logos"
             src={linkedInLogo}
             alt="Linkedin Logo"
+            loading="lazy"
           />
         </a>
         <a
@@ -42,7 +43,12 @@ const Contact = () => (
           rel="external noopener external"
           margin="auto"
         >
-          <img className="contact-logos" src={githubMark} alt="GitHub Logo" />
+          <img
+            className="contact-logos"
+            src={githubMark}
+            alt="GitHub Logo"
+            loading="lazy"
+          />
         </a>
       </div>
     </div>
