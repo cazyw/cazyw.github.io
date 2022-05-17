@@ -6,7 +6,7 @@
     "title": "Shakespeare Quotes",
     "description": "To be or not to be, that is the question",
     "github": "https://github.com/cazyw/shakespeare-quotes",
-    "demo": "https://shakespeare.cazyw.dev/"
+    "demo": "https://shakespeare.cazyw.dev"
   },
   {
     "id": "jsspotify",
@@ -15,7 +15,7 @@
     "title": "Spotify Playlist Backup",
     "description": "Download track details from your playlists",
     "github": "https://github.com/cazyw/spotify-playlist-backup",
-    "demo": "https://spotify-playlist-backup.herokuapp.com"
+    "demo": "https://spotify.cazyw.dev"
   },
   {
     "id": "railsPhotoBlog",
